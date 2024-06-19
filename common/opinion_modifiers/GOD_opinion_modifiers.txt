@@ -1,0 +1,28 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	
+	besthappy_sc = {
+		value = 25
+	}
+	unhappy_ev = {
+		value = -25
+	}
+	unhappy_se = {
+		value = -40
+	}
+	besthappy_help = {
+		value = 50
+	}
+	
+	
+}

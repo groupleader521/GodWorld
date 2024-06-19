@@ -1,0 +1,3437 @@
+focus_tree = {
+	id = GodWorld_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GOD
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2000 }
+	default = no
+	focus = {
+		id = GOD_call_aivert
+		icon = GFX_goal_generic_radar
+		cost = 2.00
+		mutually_exclusive = {
+			focus = GOD_call_lena
+			focus = GOD_call_shilfiranlina
+			focus = GOD_font_look_sitaution
+		}
+		x = 2
+		y = 0
+			completion_reward = {
+					add_popularity = {
+							ideology = communism
+							popularity = 0.03
+						}
+					country_event = { id = nsgodworld.16 }
+				}
+
+	}
+	focus = {
+		id = GOD_call_lena
+		icon = GFX_goal_generic_radar
+		cost = 2.00
+		mutually_exclusive = {
+			focus = GOD_call_aivert
+			focus = GOD_call_shilfiranlina
+			focus = GOD_font_look_sitaution
+		}
+		x = 10
+		y = 0
+			completion_reward = {
+					add_popularity = {
+							ideology = democratic
+							popularity = 0.03
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_call_shilfiranlina
+		icon = GFX_goal_generic_radar
+		cost = 2.00
+		mutually_exclusive = {
+			focus = GOD_call_aivert
+			focus = GOD_call_lena
+			focus = GOD_font_look_sitaution
+		}
+		x = 20
+		y = 0
+			completion_reward = {
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.03
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_font_look_sitaution
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		mutually_exclusive = {
+			focus = GOD_call_shilfiranlina
+			focus = GOD_call_aivert
+			focus = GOD_call_lena
+		}
+		x = 25
+		y = 0
+			completion_reward = {
+					add_political_power = 150
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.03
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_solve_in_problem
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		x = 26
+		y = 5
+		prerequisite = {
+			focus = GOD_build_par_sub
+		}
+			completion_reward = {
+					add_stability = 0.1
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.03
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_learn_outside_tech
+		icon = GFX_goal_continuous_research
+		cost = 5.00
+		x = 29
+		y = 0
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_learn_outside_ins_tech
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			every_owned_state = {
+			    limit = {
+				    is_island_state = no
+			        is_controlled_by = GOD
+			        is_core_of = GOD
+				}
+			    add_extra_state_shared_building_slots = 1
+			}
+			add_tech_bonus = {
+				name = GOD_learn_outside_panzer_tech
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+
+	}
+	focus = {
+		id = GOD_together_econ
+		icon = GFX_focus_jap_manchurian_project
+		cost = 6.00
+		mutually_exclusive = {
+			focus = GOD_public_econ
+			focus = GOD_par_econ
+			focus = GOD_free_econ
+		}
+		completion_reward = {
+			add_political_power = 60
+			add_ideas = god_controlledeconomy
+		}
+		x = 33
+		y = 0
+
+	}
+	focus = {
+		id = GOD_public_econ
+		icon = GFX_goal_generic_soviet_construction
+		cost = 6.00
+		mutually_exclusive = {
+			focus = GOD_together_econ
+			focus = GOD_par_econ
+			focus = GOD_free_econ
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.05
+			add_ideas = god_communeeconomy1
+			every_owned_state = {
+			    limit = {
+				    is_island_state = no
+			        is_controlled_by = GOD
+			        is_core_of = GOD
+				}
+			    add_extra_state_shared_building_slots = 1
+			}
+		}
+		x = 35
+		y = 0
+
+	}
+	focus = {
+		id = GOD_par_econ
+		icon = GFX_focus_generic_self_management
+		cost = 6.00
+		mutually_exclusive = {
+			focus = GOD_public_econ
+			focus = GOD_free_econ
+			focus = GOD_together_econ
+		}
+		completion_reward = {
+		    add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_stability = 0.06
+			add_ideas = god_commonunion
+		}
+		x = 37
+		y = 0
+
+	}
+	focus = {
+		id = GOD_free_econ
+		icon = GFX_goal_support_democracy
+		cost = 6.00
+		mutually_exclusive = {
+			focus = GOD_par_econ
+			focus = GOD_public_econ
+			focus = GOD_together_econ
+		}
+		completion_reward = {
+		    add_popularity = { ideology = democratic popularity = 0.06 }
+			add_ideas = god_freemarket
+		}
+		x = 39
+		y = 0
+
+	}
+	focus = {
+		id = GOD_plan_army
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 2.00
+		x = 45
+		y = 0
+		completion_reward = {
+		    army_experience = 40
+		}
+
+	}
+	focus = {
+		id = GOD_plan_navy
+		icon = GFX_goal_generic_navy_submarine
+		cost = 2.00
+		x = 55
+		y = 0
+		completion_reward = {
+		    navy_experience = 40
+		}
+
+	}
+	focus = {
+		id = GOD_plan_air
+		icon = GFX_goal_generic_air_bomber
+		cost = 2.00
+		x = 50
+		y = 6
+		completion_reward = {
+		    air_experience = 40
+		}
+
+	}
+	focus = {
+		id = GOD_use_new_policy
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_call_aivert
+		}
+		x = 2
+		y = 1
+			completion_reward = {
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = GOD_include_enemy
+		icon = GFX_goal_generic_alliance
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_use_new_policy
+		}
+		mutually_exclusive = {
+			focus = GOD_clear_enemy
+		}
+		x = 0
+		y = 2
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = GOD_accept_enemy
+		icon = GFX_focus_generic_military_academy
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_include_enemy
+		}
+		x = 0
+		y = 3
+			completion_reward = {
+					add_stability = -0.05
+					add_manpower = 20000
+				}
+
+	}
+	focus = {
+		id = GOD_clear_enemy
+		icon = GFX_goal_generic_attack_allies
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_use_new_policy
+		}
+		mutually_exclusive = {
+			focus = GOD_include_enemy
+		}
+		x = 4
+		y = 2
+			completion_reward = {
+					add_stability = -0.2
+				}
+
+	}
+	focus = {
+		id = GOD_dec_clear_enemy_inf
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_clear_enemy
+		}
+		mutually_exclusive = {
+			focus = GOD_nosee_clear_enemy_inf
+		}
+		x = 3
+		y = 3
+			completion_reward = {
+					add_stability = 0.1
+					add_war_support = 0.1
+				}
+
+	}
+	focus = {
+		id = GOD_nosee_clear_enemy_inf
+		icon = GFX_goal_generic_CAS
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_clear_enemy
+		}
+		mutually_exclusive = {
+			focus = GOD_dec_clear_enemy_inf
+		}
+		x = 5
+		y = 3
+			completion_reward = {
+					add_stability = -0.1
+					add_war_support = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_fate_community
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_accept_enemy
+			focus = GOD_dec_clear_enemy_inf
+			focus = GOD_nosee_clear_enemy_inf
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					add_political_power = 200
+					add_stability = 0.2
+					add_manpower = 50000
+					set_politics = {
+							ruling_party = communism
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_collective_leader
+		icon = GFX_focus_SOV_third_rome
+		cost = 2.00
+		prerequisite = {
+			focus = GOD_fate_community
+		}
+		mutually_exclusive = {
+			focus = GOD_person_leader
+		}
+		x = 0
+		y = 5
+			completion_reward = {
+					add_popularity = {
+							ideology = communism
+							popularity = 0.03
+						}
+					add_political_power = 35
+					add_stability = 0.15
+					remove_country_leader_trait = littletyrant
+					add_country_leader_trait = group_wisdom
+				}
+
+	}
+	focus = {
+		id = GOD_person_leader
+		icon = GFX_focus_spa_fuse_the_parties
+		cost = 2.00
+		prerequisite = {
+			focus = GOD_fate_community
+		}
+		mutually_exclusive = {
+			focus = GOD_collective_leader
+		}
+		x = 4
+		y = 5
+			completion_reward = {
+					add_popularity = {
+							ideology = communism
+							popularity = 0.03
+						}
+					add_political_power = 55
+					add_stability = 0.1
+					add_war_support = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_build_dem_center
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_call_lena
+		}
+		x = 10
+		y = 1
+			completion_reward = {
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = GOD_build_con_restaurant
+		icon = GFX_focus_ger_strike_at_the_source
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_build_dem_center
+		}
+		x = 8
+		y = 2
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = GOD_inc_unify_power
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 4.00
+		prerequisite = {
+			focus = GOD_build_con_restaurant
+		}
+		x = 8
+		y = 3
+			completion_reward = {
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = GOD_reform_par_system
+		icon = GFX_focus_hol_continue_the_war_in_batavia
+		cost = 8.00
+		prerequisite = {
+			focus = GOD_build_dem_center
+		}
+		mutually_exclusive = {
+			focus = GOD_unreform_par_system
+		}
+		x = 10
+		y = 2
+			completion_reward = {
+					add_stability = 0.1
+				}
+
+	}
+	focus = {
+		id = GOD_dispersed_power
+		icon = GFX_focus_hol_war_on_pacifism
+		cost = 4.00
+		prerequisite = {
+			focus = GOD_reform_par_system
+		}
+		x = 10
+		y = 3
+			completion_reward = {
+					add_stability = 0.1
+				}
+
+	}
+	focus = {
+		id = GOD_unreform_par_system
+		icon = GFX_focus_hol_daf
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_build_dem_center
+		}
+		mutually_exclusive = {
+			focus = GOD_reform_par_system
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = GOD_aggregate_power
+		icon = GFX_focus_hol_war_on_pacifism
+		cost = 4.00
+		prerequisite = {
+			focus = GOD_unreform_par_system
+		}
+		x = 12
+		y = 3
+			completion_reward = {
+					add_stability = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_unify_un
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_dispersed_power
+			focus = GOD_aggregate_power
+		}
+		prerequisite = {
+			focus = GOD_inc_unify_power
+		}
+		x = 10
+		y = 4
+			completion_reward = {
+					add_political_power = 200
+					add_stability = 0.2
+					add_manpower = 50000
+					set_politics = {
+							ruling_party = democratic
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_freedom_world
+		icon = GFX_focus_EST_fight_the_vaps
+		cost = 2.00
+		prerequisite = {
+			focus = GOD_unify_un
+		}
+		x = 10
+		y = 5
+			completion_reward = {
+					add_popularity = {
+							ideology = democratic
+							popularity = 0.03
+						}
+					add_political_power = 55
+					add_stability = 0.3
+				}
+
+	}
+	focus = {
+		id = GOD_abolish_class_system
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_person_leader
+			focus = GOD_collective_leader
+			focus = GOD_freedom_world
+		}
+		x = 5
+		y = 6
+			completion_reward = {
+					add_popularity = {
+							ideology = communism
+							popularity = 0.1
+						}
+					add_political_power = 100
+					add_stability = 0.01
+					add_manpower = 100000
+				}
+
+	}
+	focus = {
+		id = GOD_build_other_world_teleportare
+		icon = GFX_goal_generic_position_armies
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_call_aivert
+			focus = GOD_call_lena
+			focus = GOD_call_shilfiranlina
+			focus = GOD_font_look_sitaution
+		}
+		completion_reward = {
+			country_event = { id = nsgodworld.13 }
+		}
+		x = 15
+		y = 1
+
+	}
+	focus = {
+		id = GOD_call_other_world_people
+		icon = GFX_goal_generic_major_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_build_other_world_teleportare
+		}
+		completion_reward = {
+			country_event = { id = nsgodworld.14 }
+		}
+		x = 15
+		y = 2
+
+	}
+	focus = {
+		id = GOD_call_inside_people
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_call_shilfiranlina
+		}
+		x = 20
+		y = 1
+			completion_reward = {
+					add_manpower = 100000
+				}
+
+	}
+	focus = {
+		id = GOD_union_other_party
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_call_inside_people
+		}
+		mutually_exclusive = {
+			focus = GOD_accept_other_party
+		}
+		x = 18
+		y = 2
+			completion_reward = {
+					add_manpower = 200000
+					add_stability = 0.2
+					add_war_support = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_union_ansite
+		icon = GFX_focus_generic_soviet_politics
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_union_other_party
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					add_war_support = 0.1
+				}
+
+	}
+	focus = {
+		id = GOD_union_lena
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_union_other_party
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					add_stability = 0.1
+				}
+
+	}
+	focus = {
+		id = GOD_complete_all_union
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_union_lena
+		}
+		prerequisite = {
+			focus = GOD_union_ansite
+		}
+		x = 18
+		y = 4
+			completion_reward = {
+					country_event = {
+							id = nsgodworld.2
+						}
+					add_stability = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_accept_other_party
+		icon = GFX_focus_SOV_womens_fascist_movement
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_call_inside_people
+		}
+		mutually_exclusive = {
+			focus = GOD_union_other_party
+		}
+		completion_reward = {
+			add_manpower = 100000
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = GOD_int_world_par
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 2.00
+		prerequisite = {
+			focus = GOD_accept_other_party
+		}
+		completion_reward = {
+			add_war_support = -0.15
+		}
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = GOD_world_attack_group
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_int_world_par
+			focus = GOD_complete_all_union
+		}
+		x = 18
+		y = 5
+			completion_reward = {
+					add_political_power = 200
+					add_stability = 0.2
+					add_manpower = 50000
+					set_politics = {
+							ruling_party = fascism
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_expand_par
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_font_look_sitaution
+		}
+		x = 25
+		y = 1
+			completion_reward = {
+					add_political_power = 150
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.08
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_clear_badman
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_expand_par
+		}
+		x = 25
+		y = 2
+			completion_reward = {
+					add_political_power = 150
+					add_stability = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_return_gameworld
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_clear_badman
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = GOD_inc_inf
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_return_gameworld
+		}
+		mutually_exclusive = {
+			focus = GOD_build_par_sub
+		}
+		x = 24
+		y = 4
+			completion_reward = {
+					add_political_power = 150
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_build_par_sub
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_return_gameworld
+		}
+		mutually_exclusive = {
+			focus = GOD_inc_inf
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_political_power = 150
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_perfect_politics_system
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_solve_in_problem
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = GOD_ind_heal
+		icon = GFX_goal_continuous_air_production
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_learn_outside_tech
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_learn_outside_ins_tech
+				bonus = 1.5
+				uses = 1
+				category = industry
+			}
+			every_owned_state = {
+			    limit = {
+				    is_island_state = no
+			        is_controlled_by = GOD
+			        is_core_of = GOD
+				}
+			    add_extra_state_shared_building_slots = 2
+			}
+		}
+		x = 28
+		y = 1
+
+	}
+	focus = {
+		id = GOD_electron_machine_engineering
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_ind_heal
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_electron_engineering
+				bonus = 0.6
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = GOD_machine_engineering
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_ideas = god_improved_motorised
+		}
+		x = 28
+		y = 3
+
+	}
+	focus = {
+		id = GOD_diginto_weapon
+		icon = GFX_focus_focus_fra_maquis
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_learn_outside_tech
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_diginto_infantry_equip
+				bonus = 0.6
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = GOD_diginto_artillery
+				bonus = 0.6
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = GOD_diginto_support_equip
+				bonus = 0.6
+				uses = 2
+				category = support_tech
+			}
+		}
+		x = 30
+		y = 1
+
+	}
+	focus = {
+		id = GOD_build_tech_center
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 4.00
+		prerequisite = {
+			focus = GOD_ind_heal
+			focus = GOD_diginto_weapon
+		}
+		prerequisite = {
+			focus = GOD_learn_outside_tech
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = GOD_resource_collection
+		icon = GFX_goal_generic_construction2
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_diginto_weapon
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_resource_all_collection
+				bonus = 0.6
+				uses = 2
+				category = excavation_tech
+			}
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = GOD_oil_supply
+		icon = GFX_goal_generic_oil_refinery
+		cost = 7.00
+		prerequisite = {
+			focus = GOD_resource_collection
+		}
+		prerequisite = {
+			focus = GOD_electron_machine_engineering
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_oil_all_supply
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+			add_ideas = god_tankoil
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = GOD_outside_order
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_together_econ
+		}
+		completion_reward = {
+			add_ideas = god_jingjidebuff2
+		}
+		x = 33
+		y = 1
+
+	}
+	focus = {
+		id = GOD_importance_base_build
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_outside_order
+		}
+		completion_reward = {
+			every_owned_state = {
+			    limit = {
+				    is_island_state = no
+			        is_controlled_by = GOD
+			        is_core_of = GOD
+				}
+			    add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		x = 33
+		y = 2
+
+	}
+	focus = {
+		id = GOD_development_minpro
+		icon = GFX_goal_generic_construct_civilian
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_importance_base_build
+		}
+		completion_reward = {
+			56 = { 
+			    add_resource = {
+				type = oil
+				amount = 5
+			    }
+			}
+			56 = { 
+			    add_resource = {
+				type = steel
+				amount = 7
+			    }
+			}
+			56 = { 
+			    add_resource = {
+				type = chromium
+				amount = 5
+			    }
+			}
+
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = GOD_economic_reform_law
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_public_econ
+		}
+		completion_reward = {
+			add_ideas = god_jingjidebuff2
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 35
+		y = 1
+
+	}
+	focus = {
+		id = GOD_importance_ind
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_economic_reform_law
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_communemanage
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = GOD_public_interwork
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_importance_ind
+		}
+		prerequisite = {
+			focus = GOD_importance_ind
+		}
+		completion_reward = {
+		    add_popularity = { ideology = communism popularity = 0.07 }
+			add_tech_bonus = {
+				name = GOD_communemanage
+				bonus = 1.5
+				uses = 1
+				category = industry
+			}
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = GOD_market_economy
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_par_econ
+		}
+		completion_reward = {
+		    add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_ideas = friendleft
+			add_ideas = god_jingjidebuff2
+		}
+		x = 37
+		y = 1
+
+	}
+	focus = {
+		id = GOD_importance_production
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_market_economy
+		}
+		completion_reward = {
+		    every_owned_state = {
+			    limit = {
+				    is_island_state = no
+			        is_controlled_by = GOD
+			        is_core_of = GOD
+				}
+			    add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = GOD_DCS_market_economy
+		icon = GFX_goal_generic_position_armies
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_importance_production
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_communemanage
+				bonus = 1.5
+				uses = 1
+				category = industry
+			}
+		}
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = GOD_Revival_of_migrant_Enterprises
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_free_econ
+		}
+		completion_reward = {
+			add_ideas = god_jingjidebuff2
+			every_owned_state = {
+			    limit = {
+				    is_island_state = no
+			        is_controlled_by = GOD
+			        is_core_of = GOD
+				}
+			    add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 39
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Investment_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_Revival_of_migrant_Enterprises
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_investindustrytech
+				bonus = 0.7
+				uses = 2
+				category = industry
+			}
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = GOD_ready_for_war
+		icon = GFX_goal_generic_major_war
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_Investment_industry
+		}
+		completion_reward = {
+			add_ideas = god_shiftindustry
+		}
+		
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = GOD_war_system
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_development_minpro
+			focus = GOD_public_interwork
+			focus = GOD_DCS_market_economy
+			focus = GOD_ready_for_war
+		}
+		mutually_exclusive = {
+			focus = GOD_tech_supreme
+		}
+		completion_reward = {
+			add_ideas = god_allforwar
+		}
+		x = 34
+		y = 4
+
+	}
+	focus = {
+		id = GOD_tech_supreme
+		icon = GFX_focus_research2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_development_minpro
+			focus = GOD_public_interwork
+			focus = GOD_DCS_market_economy
+			focus = GOD_ready_for_war
+		}
+		mutually_exclusive = {
+			focus = GOD_war_system
+		}
+		completion_reward = {
+			add_research_slot = 2
+		}
+		x = 38
+		y = 4
+
+	}
+	
+	focus = {
+		id = GOD_par_army_plan
+		icon = GFX_goal_generic_special_forces
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_army
+		}
+		mutually_exclusive = {
+			focus = GOD_union_army_plan
+			focus = GOD_attack_army_plan
+			focus = GOD_fate_army_plan
+		}
+		completion_reward = {
+			army_experience = 90
+		}
+		x = 42
+		y = 1
+
+	}
+	focus = {
+		id = GOD_learn_inside_command
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_par_army_plan
+		}
+		completion_reward = {
+		    add_ideas = god_command_delegation
+		}
+		x = 42
+		y = 2
+
+	}
+	focus = {
+		id = GOD_research_armor
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_learn_inside_command
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_armor_research
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+		x = 42
+		y = 3
+
+	}
+	focus = {
+		id = GOD_reform_fight_system
+		icon = GFX_goal_generic_air_production
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_research_armor
+		}
+		completion_reward = {
+		    add_ideas = god_blitzkrieg
+		}
+		x = 42
+		y = 4
+
+	}
+	focus = {
+		id = GOD_union_army_plan
+		icon = GFX_goal_generic_special_forces
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_army
+		}
+		mutually_exclusive = {
+			focus = GOD_par_army_plan
+			focus = GOD_attack_army_plan
+			focus = GOD_fate_army_plan
+		}
+		completion_reward = {
+			army_experience = 90
+		}
+		x = 44
+		y = 1
+
+	}
+	focus = {
+		id = GOD_new_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_union_army_plan
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_new_artillery
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+		x = 44
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Artillery_priority
+		icon = GFX_goal_generic_army_tanks
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_new_artillery
+		}
+		completion_reward = {
+			add_ideas = god_improve_artillery1
+		}
+		x = 44
+		y = 3
+
+	}
+	focus = {
+		id = GOD_Artillery_production_line
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Artillery_priority
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = god_improve_artillery1
+				add_idea = god_improve_artillery2
+			}
+		}
+		x = 44
+		y = 4
+
+	}
+	focus = {
+		id = GOD_Fighter_research
+		icon = GFX_goal_generic_air_fighter
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_air
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_Fighter_research1
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+		x = 45
+		y = 7
+
+	}
+	focus = {
+		id = GOD_Enhanced_fighter
+		icon = GFX_goal_generic_air_fighter
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Fighter_research
+		}
+		completion_reward = {
+			add_ideas = god_fighter_buff
+		}
+		x = 45
+		y = 9
+
+	}
+	focus = {
+		id = GOD_attack_army_plan
+		icon = GFX_goal_generic_special_forces
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_army
+		}
+		mutually_exclusive = {
+			focus = GOD_union_army_plan
+			focus = GOD_fate_army_plan
+			focus = GOD_par_army_plan
+		}
+		completion_reward = {
+			army_experience = 90
+		}
+		x = 46
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Establishment_of_staff
+		icon = GFX_focus_generic_industry_2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_attack_army_plan
+		}
+		completion_reward = {
+			add_ideas = god_improve_general_staff1
+		}
+		x = 46
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Training_officers
+		icon = GFX_focus_generic_military_mission
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Establishment_of_staff
+		}
+		completion_reward = {
+			every_unit_leader = {
+				add_logistics = 2
+				add_planning = 2
+				add_defense = 2
+				add_attack = 2
+			}
+		}
+		x = 46
+		y = 3
+
+	}
+	focus = {
+		id = GOD_combined_action
+		icon = GFX_focus_generic_license_production
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Training_officers
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = god_improve_general_staff1
+				add_idea = god_improve_general_staff2
+			}
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = GOD_fate_army_plan
+		icon = GFX_goal_generic_special_forces
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_army
+		}
+		mutually_exclusive = {
+			focus = GOD_attack_army_plan
+			focus = GOD_union_army_plan
+			focus = GOD_par_army_plan
+		}
+		completion_reward = {
+			army_experience = 90
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Training_recruits
+		icon = GFX_focus_generic_manpower
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_fate_army_plan
+		}
+		completion_reward = {
+			add_ideas = god_improve_infantry1
+		}
+		x = 48
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Conventional_equipment_production
+		icon = GFX_focus_secret_rearmament
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Training_recruits
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = god_improve_infantry1
+				add_idea = god_improve_infantry2
+			}
+		}
+		x = 48
+		y = 3
+
+	}
+	focus = {
+		id = GOD_Legion_dispatch
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Conventional_equipment_production
+		}
+		completion_reward = {
+			add_ideas = god_corps_deployment
+		}
+		x = 48
+		y = 4
+
+	}
+	
+	focus = {
+		id = GOD_ARM_STRENG
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Legion_dispatch
+			focus = GOD_combined_action
+			focus = GOD_Artillery_production_line
+			focus = GOD_reform_fight_system
+		}
+		completion_reward = {
+			add_ideas = god_GOD_ARM
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = GOD_Tactical_bombing_and_research
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_air
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_Tactical_bombing_and_research1
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+			if = {
+			    limit = { GOD = { has_tech = tactical_bomber3 } }	
+                add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = 100 producer = GOD }		    	
+			}
+			if = {
+				limit = { 
+				    GOD = {
+					    NOT = {
+							has_tech = tactical_bomber3
+						}
+						has_tech = tactical_bomber2
+					} 	
+				}
+				add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = 100 producer = GOD }	
+			}
+            if = {
+				limit = { 
+				    GOD = {
+					    NOT = {
+							has_tech = tactical_bomber3
+							has_tech = tactical_bomber2
+						}
+						has_tech = tactical_bomber1
+					}	    	
+				}
+				add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = 100 producer = GOD }	
+			}
+		}
+		x = 48
+		y = 7
+
+	}
+	focus = {
+		id = GOD_Enhanced_tactical_bomber
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Tactical_bombing_and_research
+		}
+		completion_reward = {
+			add_ideas = god_tb_buff
+		}
+		x = 48
+		y = 9
+
+	}
+	focus = {
+		id = GOD_Aviation_facilities_construction
+		icon = GFX_focus_POL_warsaw_main_station
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_air
+		}
+		completion_reward = {
+			add_ideas = god_air_antiair_construction
+		}
+		x = 50
+		y = 8
+
+	}
+	focus = {
+		id = GOD_Airborne_troops
+		icon = GFX_focus_generic_paratrooper
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Aviation_facilities_construction
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_paradrop
+				bonus = 1.0
+				uses = 2
+				category = para_tech
+			}
+			add_ideas = god_paratrooper_buff
+		}
+		x = 50
+		y = 10
+
+	}
+	focus = {
+		id = GOD_Rocket_research
+		icon = GFX_focus_rocketry
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Airborne_troops
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_rocket
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+			}
+			add_ideas = god_air_antiair_rocket_construction
+		}
+		x = 48
+		y = 11
+
+	}
+	focus = {
+		id = GOD_par_navy_plan
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_navy
+		}
+		mutually_exclusive = {
+			focus = GOD_union_navy_plan
+			focus = GOD_attack_navy_plan
+			focus = GOD_fate_navy_plan
+		}
+		completion_reward = {
+		    navy_experience = 90
+		}
+		x = 52
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Capital_ship_priority
+		icon = GFX_focus_generic_cruiser2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_par_navy_plan
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_Capital_ship_priority1
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = GOD_Capital_ship_priority2
+				bonus = 1.0
+				uses = 2
+				category = bc_tech
+			}
+		}
+		x = 52
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Applied_capital_ship
+		icon = GFX_focus_generic_cruiser2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Capital_ship_priority
+		}
+		completion_reward = {
+		    add_ideas = god_nav_daxi_production
+		}
+		x = 52
+		y = 3
+		
+	}
+	focus = {
+		id = GOD_Research_on_close_support_aircraft
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_air
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_Research_on_close_support_aircraft1
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		x = 52
+		y = 7
+
+	}
+	focus = {
+		id = GOD_Enhanced_close_support_aircraft
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Research_on_close_support_aircraft
+		}
+		completion_reward = {
+			add_ideas = god_CAS_buff
+		}
+		x = 52
+		y = 9
+
+	}
+	focus = {
+		id = GOD_New_engine
+		icon = GFX_goal_generic_production2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Airborne_troops
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_jet
+				bonus = 1.0
+				uses = 3
+				category = jet_technology
+			}
+		}
+		x = 52
+		y = 11
+
+	}
+	focus = {
+		id = GOD_atomic_energy
+		icon = GFX_focus_wonderweapons
+		cost = 6.00
+		prerequisite = {
+			focus = GOD_New_engine
+			focus = GOD_Rocket_research
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_learn_outside_nuclear_tech
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+		x = 50
+		y = 12
+
+	}
+	focus = {
+		id = GOD_union_navy_plan
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_navy
+		}
+		mutually_exclusive = {
+			focus = GOD_par_navy_plan
+			focus = GOD_attack_navy_plan
+			focus = GOD_fate_navy_plan
+		}
+		completion_reward = {
+		    navy_experience = 90
+		}
+		x = 54
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Carrier_priority
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_union_navy_plan
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_Carrier_priority1
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = GOD_Carrier_priority2
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+		x = 54
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Aircraft_carrier_battle_group
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Carrier_priority
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_Aircraft_carrier_battle_group1
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = naval_air
+			}
+		    add_ideas = nav_dajkay_production
+		}
+		x = 54
+		y = 3
+
+	}
+	focus = {
+		id = GOD_Aircraft_Escort_plan
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Aircraft_carrier_battle_group
+			focus = GOD_Applied_capital_ship
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_Aircraft_Escort_plan1
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = GOD_Aircraft_Escort_plan2
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+		x = 53
+		y = 4
+
+	}
+	focus = {
+		id = GOD_attack_navy_plan
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_navy
+		}
+		mutually_exclusive = {
+			focus = GOD_union_navy_plan
+			focus = GOD_fate_navy_plan
+			focus = GOD_par_navy_plan
+		}
+		completion_reward = {
+		    navy_experience = 90
+		}
+		x = 56
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Aircraft_Submarine_priority
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_attack_navy_plan
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_Aircraft_Submarine_priority1
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = ss_tech
+			}
+		    add_tech_bonus = {
+				name = GOD_Aircraft_Submarine_priority2
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+		}
+		x = 56
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Aircraft_submarine_warfare
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Aircraft_Submarine_priority
+		}
+		completion_reward = {
+		    add_ideas = god_nav_hsf_production
+		}
+		x = 56
+		y = 3
+
+	}
+	focus = {
+		id = GOD_world_together
+		icon = GFX_focus_YUG_dissolve_serbia
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_abolish_class_system
+		}
+		x = 5
+		y = 7
+			completion_reward = {
+					add_political_power = 150
+					add_stability = 0.2
+					add_manpower = 200000
+				}
+
+	}
+	focus = {
+		id = GOD_Take_in_civilians
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_world_together
+		}
+		x = 3
+		y = 8
+			completion_reward = {
+					add_manpower = 500000
+				}
+
+	}
+	focus = {
+		id = GOD_teach_in_civilians
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_world_together
+		}
+		x = 7
+		y = 8
+			completion_reward = {
+					add_war_support = 0.2
+				}
+
+	}
+	focus = {
+		id = GOD_winner_together
+		icon = GFX_focus_SOV_restore_cossack_units
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_teach_in_civilians
+		}
+		prerequisite = {
+			focus = GOD_Take_in_civilians
+		}
+		x = 5
+		y = 9
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = GOD_see_the_world
+		icon = GFX_focus_eng_global_defense
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_winner_together
+			focus = GOD_world_supreme
+			focus = GOD_return_gameworld
+			focus = GOD_freedom_world
+		}
+		x = 13
+		y = 10
+			completion_reward = {
+					add_ideas = world_strategy
+					set_rule = {
+							can_declare_war_on_same_ideology = yes
+							can_send_volunteers = yes
+							can_guarantee_other_ideologies = yes
+						}
+					if = {
+							limit = {
+									has_government = democratic
+								}
+							set_rule = {
+									can_only_justify_war_on_threat_country = no
+									can_lower_tension = no
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_extreme_godworld
+		icon = GFX_focus_focus_fra_fascist_threat
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_world_attack_group
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_ideas = evil_godworld
+				}
+
+	}
+	focus = {
+		id = GOD_world_supreme
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_extreme_godworld
+		}
+		x = 18
+		y = 7
+			completion_reward = {
+					add_political_power = 200
+				}
+
+	}
+	focus = {
+		id = GOD_Improve_the_life_of_God_and_people
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_inc_inf
+		}
+		x = 24
+		y = 5
+			completion_reward = {
+					add_stability = 0.1
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Empower_God_and_people
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Improve_the_life_of_God_and_people
+		}
+		x = 24
+		y = 6
+			completion_reward = {
+					add_war_support = 0.1
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Cooperation_with_Germany
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		prerequisite = {
+			focus = GOD_Develop_new_cooperation_models
+		}
+		mutually_exclusive = {
+			focus = GOD_Hostile_to_Germany
+			focus = GOD_Cooperation_with_the_Soviet_Union
+		}
+		x = 6
+		y = 11
+			completion_reward = {
+					GER = {
+							add_political_power = 100
+							if = {
+									limit = {
+											NOT = {
+													has_opinion_modifier = besthappy_sc
+												}
+										}
+									add_opinion_modifier = {
+											target = GOD
+											modifier = besthappy_sc
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Develop_new_cooperation_models
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_world_supreme
+			focus = GOD_winner_together
+		}
+		x = 15
+		y = 10
+			completion_reward = {
+					add_political_power = 100
+					add_stability = 0.1
+					add_war_support = 0.1
+				}
+
+	}
+	focus = {
+		id = GOD_Walking_with_Germany
+		icon = GFX_focus_POL_ban_nazi_party
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Cooperation_with_Germany
+			
+			
+		}
+		available = {
+			NOT = {has_completed_focus = GOD_world_union}
+		}
+		
+		x = 6
+		y = 12
+			completion_reward = {
+					custom_effect_tooltip = other_leave_faction
+					GER = {
+							if = {
+									limit = {
+											is_faction_leader = yes
+										}
+									add_to_faction = GOD
+									add_ai_strategy = {
+											type = alliance
+											id = GOD
+											value = 100
+										}
+								}
+							if = {
+									limit = {
+											is_faction_leader = no
+										}
+									give_military_access = GOD
+									give_guarantee = GOD
+									diplomatic_relation = {
+											country = GOD
+											relation = non_aggression_pact
+											active = yes
+										}
+									add_ai_strategy = {
+											type = befriend
+											id = GOD
+											value = 100
+										}
+									GOD = {
+											give_guarantee = GER
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	
+	focus = {
+		id = GOD_Hostile_to_Germany
+		icon = GFX_focus_attack_germany
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		mutually_exclusive = {
+			focus = GOD_Cooperation_with_Germany
+		}
+		x = 8
+		y = 11
+			completion_reward = {
+					GER = {
+							add_political_power = -100
+							if = {
+									limit = {
+											NOT = {
+													has_opinion_modifier = unhappy_ev
+												}
+										}
+									add_opinion_modifier = {
+											target = GOD
+											modifier = unhappy_ev
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Conflict_with_Germany
+		icon = GFX_focus_attack_germany
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Hostile_to_Germany
+		}
+		x = 8
+		y = 12
+			completion_reward = {
+					country_event = {
+							id = nsgodworld.3
+						}
+					GER = {
+							if = {
+									limit = {
+											NOT = {
+													has_opinion_modifier = unhappy_se
+												}
+										}
+									add_opinion_modifier = {
+											target = GOD
+											modifier = unhappy_se
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_attack_with_Germany
+		icon = GFX_focus_attack_germany
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Conflict_with_Germany
+		}
+		x = 8
+		y = 13
+			completion_reward = {
+				every_state = {
+					limit = { is_core_of = GER }
+					add_core_of = ROOT
+				}
+				declare_war_on = {
+				target = GER #国家ID
+
+				type = annex_everything #战争目的
+
+				}
+			}
+
+	}
+	focus = {
+		id = GOD_Cooperation_with_the_Soviet_Union
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		mutually_exclusive = {
+			focus = GOD_Hostile_with_the_Soviet_Union
+			focus = GOD_Cooperation_with_Germany
+		}
+		prerequisite = {
+			focus = GOD_Develop_new_cooperation_models
+		}
+		x = 10
+		y = 11
+			completion_reward = {
+					SOV = {
+							add_political_power = 100
+							if = {
+									limit = {
+											NOT = {
+													has_opinion_modifier = besthappy_sc
+												}
+										}
+									add_opinion_modifier = {
+											target = GOD
+											modifier = besthappy_sc
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_walkly_with_the_Soviet_Union
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Cooperation_with_the_Soviet_Union
+		}
+		available = {
+			NOT = {has_completed_focus = GOD_world_union}
+		}
+		x = 10
+		y = 12
+			completion_reward = {
+					custom_effect_tooltip = other_leave_faction
+					SOV = {
+							if = {
+									limit = {
+											is_faction_leader = yes
+										}
+									add_to_faction = GOD
+									add_ai_strategy = {
+											type = alliance
+											id = GOD
+											value = 100
+										}
+								}
+							if = {
+									limit = {
+											is_faction_leader = no
+										}
+									give_military_access = GOD
+									give_guarantee = GOD
+									diplomatic_relation = {
+											country = GOD
+											relation = non_aggression_pact
+											active = yes
+										}
+									add_ai_strategy = {
+											type = befriend
+											id = GOD
+											value = 100
+										}
+									GOD = {
+											give_guarantee = SOV
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	
+	focus = {
+		id = GOD_Hostile_with_the_Soviet_Union
+		icon = GFX_focus_attack_soviet
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		mutually_exclusive = {
+			focus = GOD_Cooperation_with_the_Soviet_Union
+		}
+		x = 12
+		y = 11
+			completion_reward = {
+					SOV = {
+							add_political_power = -100
+							if = {
+									limit = {
+											NOT = {
+													has_opinion_modifier = unhappy_ev
+												}
+										}
+									add_opinion_modifier = {
+											target = GOD
+											modifier = unhappy_ev
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Conflict_with_the_Soviet_Union
+		icon = GFX_focus_attack_soviet
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Hostile_with_the_Soviet_Union
+		}
+		x = 12
+		y = 12
+			completion_reward = {
+					country_event = {
+							id = nsgodworld.4
+						}
+					SOV = {
+							if = {
+									limit = {
+											NOT = {
+													has_opinion_modifier = unhappy_se
+												}
+										}
+									add_opinion_modifier = {
+											target = GOD
+											modifier = unhappy_se
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_attack_with_the_Soviet_Union
+		icon = GFX_focus_attack_soviet
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Conflict_with_the_Soviet_Union
+		}
+		x = 12
+		y = 13
+			completion_reward = {
+				every_state = {
+						limit = { is_core_of = SOV }
+						add_core_of = ROOT
+					}
+					create_wargoal = {
+							type = annex_everything
+							target = SOV
+							expire = -1
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_world_union
+		icon = GFX_focus_SOV_reinforce_northern_naval_bases
+		cost = 7.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		x = 13
+		y = 14
+			completion_reward = {
+					set_rule = {
+							can_create_factions = yes
+						}
+					create_faction = godworld_alliance
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+					unlock_decision_tooltip = GOD_political_reorganization_communism
+					unlock_decision_tooltip = GOD_political_reorganization_democratic
+					unlock_decision_tooltip = GOD_political_reorganization_neutrality
+					unlock_decision_tooltip = GOD_political_reorganization_fascism
+					unlock_decision_tooltip = GOD_political_reorganization_change
+					unlock_decision_tooltip = GOD_political_rule_ansite1
+					unlock_decision_tooltip = GOD_political_rule_aivert1
+					unlock_decision_tooltip = GOD_political_rule_shilfiranlina1
+					unlock_decision_tooltip = GOD_political_rule_lena1
+					
+				}
+
+	}
+	focus = {
+		id = GOD_Focus_on_China
+		icon = GFX_focus_chi_united_front
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		x = 16
+		y = 11
+			completion_reward = {
+					country_event = {
+							id = nsgodworld.5
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Help_the_prc
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 4.00
+		prerequisite = {
+			focus = GOD_Focus_on_China
+			focus = GOD_Focus_on_China
+		}
+		mutually_exclusive = {
+			focus = GOD_Help_the_krm
+		}
+		x = 15
+		y = 12
+			completion_reward = {
+					add_political_power = 15
+					unlock_decision_tooltip = GOD_asia_support_PRC
+					unlock_decision_tooltip = GOD_asia_officer_PRC
+					PRC = {
+							add_opinion_modifier = {
+									target = GOD
+									modifier = besthappy_help
+								}
+								add_political_power = 200
+						}
+					PRC = {
+							add_ai_strategy = {
+									type = befriend
+									id = GOD
+									value = 200
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Help_the_krm
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 4.00
+		prerequisite = {
+			focus = GOD_Focus_on_China
+			focus = GOD_Focus_on_China
+		}
+		mutually_exclusive = {
+			focus = GOD_Help_the_prc
+		}
+		x = 17
+		y = 12
+			completion_reward = {
+					add_political_power = 15
+					unlock_decision_tooltip = GOD_asia_support_KMT
+					unlock_decision_tooltip = GOD_asia_officer_KMT
+					CHI = {
+							add_opinion_modifier = {
+									target = GOD
+									modifier = besthappy_help
+								}
+								add_political_power = 200
+						}
+					CHI = {
+							add_ai_strategy = {
+									type = befriend
+									id = GOD
+									value = 200
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Help_the_prc_ind
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Help_the_prc
+		}
+		x = 15
+		y = 13
+			completion_reward = {
+					add_political_power = 35
+					unlock_decision_tooltip = GOD_HELP_PRC_INS
+					PRC = {
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = arms_factory
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = arms_factory
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_ARM_STRENG_CHI
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 17.00
+		prerequisite = {
+			focus=GOD_Help_the_prc_ind
+			focus=GOD_Help_the_krm_ind
+		}
+		prerequisite = {
+			focus = GOD_ARM_STRENG
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					PRC = {
+						has_opinion = {
+							target = ROOT
+							value > 20
+						}
+					}
+				}
+
+				PRC = {
+					add_ideas = god_GOD_ARM
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						has_opinion = {
+							target = ROOT
+							value > 20
+						}
+					}
+				}
+
+				CHI = {
+					add_ideas = god_GOD_ARM
+				}
+			}
+			country_event = { id = nsgodworld.17 }
+			
+		}
+		x = 16
+		y = 14
+
+	}
+	focus = {
+		id = GOD_Help_the_krm_ind
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Help_the_krm
+		}
+		x = 17
+		y = 13
+			completion_reward = {
+					add_political_power = 35
+					unlock_decision_tooltip = GOD_HELP_KMT_INS
+					CHI = {
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = arms_factory
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = arms_factory
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_country_flag = hsf_maho_reason_start
+								}
+							custom_effect_tooltip = maho_reason_5_down_tip
+							subtract_from_variable = {
+									var = maho_reason
+									value = 5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GOD_Interference_in_Italy
+		icon = GFX_focus_generic_italy_first
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Look_around
+		}
+		completion_reward = {
+			unlock_decision_tooltip = GOD_control_ita_kinghelpa
+			unlock_decision_tooltip = GOD_control_ita_kingwar
+		}
+		x = 2
+		y = 12
+
+	}
+	focus = {
+		id = GOD_Interference_in_SPR
+		icon = GFX_focus_focus_fra_intervention_spain
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Look_around
+		}
+		available = {
+			16 = { is_owned_by = GOD }
+		}
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = SPR }
+				add_core_of = ROOT
+			}
+			declare_war_on = {
+			target = SPR #国家ID
+
+			type = annex_everything #战争目的
+
+			}
+		}
+		x = 4
+		y = 12
+
+	}
+	focus = {
+		id = GOD_fate_navy_plan
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_navy
+		}
+		mutually_exclusive = {
+			focus = GOD_attack_navy_plan
+			focus = GOD_union_navy_plan
+			focus = GOD_par_navy_plan
+		}
+		completion_reward = {
+		    navy_experience = 90
+		}
+		x = 58
+		y = 1
+
+	}
+	focus = {
+		id = GOD_Increase_dock_output
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_fate_navy_plan
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_Increase_dock_output1
+				bonus = 0.50
+				uses = 4
+				category = naval_equipment
+			}
+			add_ideas = god_nav_pravada_production
+		}
+		x = 58
+		y = 2
+
+	}
+	focus = {
+		id = GOD_Expand_production_scale
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Increase_dock_output
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		x = 58
+		y = 3
+
+	}
+	focus = {
+		id = GOD_optimal_design
+		icon = GFX_goal_generic_navy_carrier
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Expand_production_scale
+			focus = GOD_Aircraft_submarine_warfare
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GOD_optimal_design1
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = GOD_optimal_design1
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+		x = 57
+		y = 4
+
+	}
+	focus = {
+		id = GOD_Naval_bomber_research
+		icon = GFX_focus_eng_special_air_service
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_plan_air
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOD_Naval_bomber_research1
+				bonus = 1.0
+				uses = 1
+				category = naval_bomber
+			}
+			if = {
+			    limit = { GOD = { has_tech = naval_bomber3 } }	
+                add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = 100 producer = GOD }		    	
+			}
+			if = {
+				limit = { 
+				    GOD = {
+					    NOT = {
+							has_tech = naval_bomber3
+						}
+						has_tech = naval_bomber2
+					} 	
+				}
+				add_equipment_to_stockpile = { type = nav_bomber_equipment_2 amount = 100 producer = GOD }	
+			}
+            if = {
+				limit = { 
+				    GOD = {
+					    NOT = {
+							has_tech = naval_bomber3
+							has_tech = naval_bomber2
+						}
+						has_tech = naval_bomber1
+					}	    	
+				}
+				add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = 100 producer = GOD }	
+			}
+		}
+		x = 55
+		y = 7
+
+	}
+	focus = {
+		id = GOD_Enhanced_Navy_bomber
+		icon = GFX_focus_eng_special_air_service
+		cost = 5.00
+		prerequisite = {
+			focus = GOD_Naval_bomber_research
+		}
+		completion_reward = {
+			add_ideas = god_nb_buff
+		}
+		x = 55
+		y = 9
+
+	}
+	focus = {
+		id = GOD_Deep_sea_project
+		icon = GFX_focus_POL_resistance
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Aircraft_Escort_plan
+			focus = GOD_optimal_design
+		}
+		completion_reward = {
+			add_political_power = 65
+			navy_experience = 100
+			add_ideas = god_nav_massive_battle
+		}
+		x = 55
+		y = 5
+
+	}
+	focus = {
+		id = GOD_Look_around
+		icon = GFX_focus_EST_estonia_is_scandinavia
+		cost = 3.00
+		prerequisite = {
+			focus = GOD_see_the_world
+		}
+		completion_reward = {
+			add_political_power = 55
+		}
+		x = 2
+		y = 11
+
+	}
+	focus = {
+		id = GOD_Expansion_plan
+		icon = GFX_focus_hol_gateway_to_europe
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Look_around
+		}
+		completion_reward = {
+			unlock_decision_tooltip = GOD_expand_plan_hol
+			unlock_decision_tooltip = GOD_expand_plan_bel
+			unlock_decision_tooltip = GOD_expand_plan_lux
+		}
+		x = 0
+		y = 12
+
+	}
+	focus = {
+		id = GOD_Attack_France
+		icon = GFX_focus_attack_france
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Expansion_plan
+		}
+		available = {
+			6 = { is_owned_by = GOD }
+			8 = { is_owned_by = GOD }
+			7 = { is_owned_by = GOD }
+		}
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = FRA }
+				add_core_of = ROOT
+			}
+			declare_war_on = {
+			target = FRA #国家ID
+
+			type = annex_everything #战争目的
+
+			}
+		}
+		x = 0
+		y = 13
+
+	}
+	focus = {
+		id = GOD_RETURN_AREA
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Attack_France
+		}
+		available = {
+			16 = { is_owned_by = GOD }
+		}
+		completion_reward = {
+			56 = {
+				limit = { is_core_of = GOD }
+				add_core_of = GER
+				
+			}
+			GER = {transfer_state = 56}
+			country_event = { id = nsgodworld.15 }
+		}
+		x = -1
+		y = 14
+
+	}
+	focus = {
+		id = GOD_Attack_ITA
+		icon = GFX_focus_attack_italy
+		cost = 10.00
+		prerequisite = {
+			focus = GOD_Attack_France
+		}
+		available = {
+			16 = { is_owned_by = GOD }
+		}
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = ITA }
+				add_core_of = ROOT
+			}
+			declare_war_on = {
+			target = ITA #国家ID
+
+			type = annex_everything #战争目的
+
+			}
+		}
+		x = 1
+		y = 14
+
+	}
+}

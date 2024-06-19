@@ -1,0 +1,29 @@
+﻿
+
+##### OOB #####
+units = { 
+    
+
+	#维纳斯舰队
+	fleet = {
+		name = "IJN"
+		naval_base = 241
+		task_force = {	
+			name = "IJN"
+			location = 241  
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "轻型巡洋舰" definition = light_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			ship = { name = "轻型巡洋舰" definition = light_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			ship = { name = "轻型巡洋舰" definition = light_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			ship = { name = "轻型巡洋舰" definition = light_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			ship = { name = "轻型巡洋舰" definition = light_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+		}
+
+    }
+}

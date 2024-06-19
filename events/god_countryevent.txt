@@ -1,0 +1,152 @@
+﻿###########################
+# godworld Events
+###########################
+
+add_namespace = cegodworld
+
+# Japanese Stage Border Incident
+country_event = {
+	id = cegodworld.1
+	title = cegodworld.1.t
+	desc = cegodworld.1.d
+	picture = GFX_events_cegodworld
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	trigger = {
+		tag = god
+		date > 1936.1.2
+		date < 1936.12.20
+	}
+	
+	option = {
+		name = cegodworld.1.a
+		remove_ideas = world_king
+	}
+	option = {
+		name = cegodworld.1.b
+		add_ideas = world_king
+	}
+}
+
+#西班牙内战
+country_event = {
+	id = cegodworld.3
+	title = cegodworld.3.t
+	desc = cegodworld.3.d
+	picture = GFX_events_cegodworld
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+	    name = cegodworld.3.a
+		add_political_power = -75
+		add_stability = -0.02
+        add_war_support = -0.05
+        complete_national_focus = GOD_Look_around
+        add_timed_idea = {
+    		idea = god_role_in_spanish_civil_war
+    		days = 270
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				random_country = {
+			        limit = {
+				        original_tag = SPR
+					    exists = yes
+					    OR = {
+				            has_government = fascism
+					        has_government = neutrality
+				        }
+					    NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
+				        NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
+				    }
+				    GOD = {
+					    add_ai_strategy = {
+    					    type = send_volunteers_desire
+    					    id = PREV
+    		    		    value = 500
+					    }
+				    }
+				    GOD = {
+					    add_ai_strategy = {
+    					    type = support
+    					    id = PREV
+    		    		    value = 500
+					    }
+				    }
+			    }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+				random_country = {
+			        limit = {
+				        original_tag = SPR
+					    exists = yes
+					    OR = {
+				            has_government = communism
+					        has_government = democratic
+				        }
+					    NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
+				        NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
+				    }
+				    GOD = {
+					    add_ai_strategy = {
+    					    type = send_volunteers_desire
+    					    id = PREV
+    		    		    value = 500
+					    }
+				    }
+				    GOD = {
+					    add_ai_strategy = {
+    					    type = support
+    					    id = PREV
+    		    		    value = 500
+					    }
+				    }
+			    }
+			}
+		}		
+	}
+	option = {
+	    name = cegodworld.3.b	
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#西班牙内战
+country_event = {
+	id = cegodworld.2
+	title = cegodworld.2.t
+	desc = cegodworld.2.d
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+	    tag = GOD
+		has_global_flag = spanish_civil_war
+		NOT = { has_global_flag = scw_over }
+	}
+	immediate = {
+	    GOD = { 
+		    country_event = { days = 10 id = cegodworld.3 }
+		}
+	}
+	option = {
+	    name = cegodworld.2.a
+	}
+}
+

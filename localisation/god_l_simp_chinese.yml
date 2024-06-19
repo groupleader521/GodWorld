@@ -1,0 +1,18 @@
+﻿#领导
+l_simp_chinese:
+ #领导
+ ansite_leader:0 "安斯特"
+ aivert_leader:0 "艾维特"
+ shilfiranlina_leader:0 "希尔菲安丽娜"
+ lena_leader:0 "蕾娜"
+ 
+ #领导描述
+ POLITICS_ansite_DESC:0 "虚空神，神界之主，得到了众神的认可(物理)，身居高位但不喜欢权力，对于拥有着强大力量的他来说权力不过是过家家罢了。"
+ POLITICS_aivert_DESC:0 "第三世界神，古老的神之一，虽然活了数亿年但少女的心性一直没有磨去。"
+ POLITICS_shilfiranlina_DESC:0 "第一世界神，古老的神之一，可爱的外表下有着一颗好斗的心，想要通过力量解决一切问题。"
+ POLITICS_lena_DESC:0 "第二世界神，古老的神之一，与艾维特是好朋友，希望神界联合起来所有的杀戮剥削全部消除。"
+
+#联盟
+ godworld_alliance:0 "神界联盟"
+ 
+ custom_diff_strong_god:0 "加强神界"

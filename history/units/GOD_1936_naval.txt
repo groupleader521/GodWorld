@@ -1,0 +1,33 @@
+﻿
+
+##### OOB #####
+units = { 
+    
+
+	#维纳斯舰队
+	fleet = {
+		name = "维纳斯舰队"
+		naval_base = 241
+		task_force = {	
+			name = "战列舰编队"
+			location = 241  
+			ship = { name = "神界科斯舰" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.9 equipment = { ship_hull_heavy_2 = {amount = 1 owner = GOD version_name = "库斯特级" } } }
+			ship = { name = "神界斯纳尔舰" definition = battleship start_experience_factor = 0.9 equipment = { ship_hull_heavy_2 = {amount = 1 owner = GOD version_name = "库斯特级" } } }
+			ship = { name = "神界莉娜舰" definition = battleship start_experience_factor = 0.9 equipment = { ship_hull_heavy_2 = {amount = 1 owner = GOD version_name = "库斯特级" } } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级" } } }
+			ship = { name = "驱逐舰2" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级"  } } }
+			ship = { name = "驱逐舰3" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级"  } } }
+			ship = { name = "驱逐舰4" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = GOD version_name = "温纳级"   } } }
+			ship = { name = "命运" definition = battle_cruiser start_experience_factor = 0.8 equipment = { ship_hull_heavy_2 = {amount = 1 owner = GOD version_name = "丽丝战巡"} } }
+			ship = { name = "塔莉" definition = battle_cruiser start_experience_factor = 0.8 equipment = { ship_hull_heavy_2 = {amount = 1 owner = GOD version_name = "丽丝战巡"} } }
+			ship = { name = "统一" definition = battle_cruiser start_experience_factor = 0.8 equipment = { ship_hull_heavy_2 = {amount = 1 owner = GOD version_name = "丽丝战巡" } } }
+			ship = { name = "联合" definition = heavy_cruiser start_experience_factor = 0.8 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = GOD version_name = "威尔重巡"} } }	
+			ship = { name = "菲娜丝" definition = heavy_cruiser start_experience_factor = 0.8 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = GOD version_name = "威尔重巡"} } }	
+			ship = { name = "轻型巡洋舰" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			ship = { name = "轻型巡洋舰2" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			ship = { name = "轻型巡洋舰3" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_2  = {amount = 1 owner = GOD version_name = "艾科级"} } }
+			
+		}
+
+    }
+}

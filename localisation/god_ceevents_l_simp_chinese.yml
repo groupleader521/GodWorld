@@ -1,0 +1,110 @@
+﻿l_simp_chinese:
+ cegodworld.1.t:0 "世界掌控者的去留"
+ cegodworld.1.d:0 "这个buff有点强，我们可以决定要不要"
+ cegodworld.1.a:0 "虽然我们很强，我们应该放弃"
+ cegodworld.1.b:0 "虽然我们很强，我们不应该放弃"
+
+ nsgodworld.1.t:0 "神界准备干涉世界"
+ nsgodworld.1.desc:0 "随着世界格局的变化，神界准备干涉世界"
+ nsgodworld.1.a:0 "我们应该应该和平干涉"
+ nsgodworld.1.b:0 "世界变天了"
+ 
+ nsgodworld.2.t:0 "神界完成联合"
+ nsgodworld.2.desc:0 "神界全城都在庆贺，据可靠消息神界的法西斯主义政党已完成了神界的联合，整合了其他所有势力\n这为神界对外扩张迈出了重要的一步。"
+ nsgodworld.2.a:0 "神界永存！！！"
+ nsgodworld.2.b:0 "世界变天了"
+ 
+ nsgodworld.3.t:0 "神界与德国的冲突"
+ nsgodworld.3.desc:0 "神界与德国的边境冲突发生了，国家与国家之间的矛盾突出，神界征服世界的野心展露无疑，这将对世界格局有怎样的影响不可而知。"
+ nsgodworld.3.a:0 "德国挡住了我们的路！！！"
+ nsgodworld.3.b:0 "弱者的吼叫罢了"
+ nsgodworld.3.c:0 "希望这不会对我们有影响"
+ 
+ nsgodworld.4.t:0 "神界与苏联的冲突"
+ nsgodworld.4.desc:0 "神界与苏联在外交上发生了严重的冲突，苏联表示神界是入侵行为，苏维埃人民不允许这种事情发生！！！"
+ nsgodworld.4.a:0 "苏联挡住了我们的路！！！"
+ nsgodworld.4.b:0 "一群小丑罢了"
+ nsgodworld.4.c:0 "希望这不会对我们有影响"
+ 
+ nsgodworld.5.t:0 "神界关注中国"
+ nsgodworld.5.desc:0 "据可靠消息，神界领导人准备前往中国，因为中国的复杂性，神界将会站在哪一边？"
+ nsgodworld.5.a:0 "为世界和平干杯！！！"
+ nsgodworld.5.b:0 "希望对我们是好事"
+ nsgodworld.5.c:0 "他们想干什么？"
+ 
+ nsgodworld.6.t:0 "神界帮助共产党发展军事"
+ nsgodworld.6.desc:0 "据可靠消息，神界对共产党提供了军事上的帮助，这对于国民党是个不利的消息。"
+ nsgodworld.6.a:0 "我们和共产党的友谊长存！！！"
+ nsgodworld.6.b:0 "不关我的事"
+ nsgodworld.6.c:0 "谢谢他们的帮助"
+ nsgodworld.6.d:0 "草！！！"
+ 
+ nsgodworld.7.t:0 "神界帮助国民党发展军事"
+ nsgodworld.7.desc:0 "据可靠消息，神界对国民党提供了军事上的帮助，这对于共产党是个不利的消息。"
+ nsgodworld.7.a:0 "我们和国民党的友谊长存！！！"
+ nsgodworld.7.b:0 "不关我的事"
+ nsgodworld.7.c:0 "谢谢他们的帮助"
+ nsgodworld.7.d:0 "可恶！！！"
+ 
+ nsgodworld.8.t:0 "荷兰宣布加入神界"
+ nsgodworld.8.desc:0 "据可靠消息，荷兰领导人已决定加入神界。"
+ nsgodworld.8.a:0 "我们向前进了一步！！！"
+ nsgodworld.8.b:0 "有这种事？"
+ 
+ nsgodworld.9.t:0 "比利时宣布加入神界"
+ nsgodworld.9.desc:0 "据可靠消息，比利时领导人已决定加入神界。"
+ nsgodworld.9.a:0 "我们向前进了一步！！！"
+ nsgodworld.9.b:0 "有这种事？"
+ 
+ nsgodworld.10.t:0 "卢森堡宣布加入神界"
+ nsgodworld.10.desc:0 "据可靠消息，卢森堡领导人已决定加入神界。"
+ nsgodworld.10.a:0 "我们向前进了一步！！！"
+ nsgodworld.10.b:0 "有这种事？"
+ 
+ nsgodworld.11.t:0 "意大利内战"
+ nsgodworld.11.desc:0 "据可靠消息，意大利皇室支持者发动了内战，想要复辟意大利皇朝。"
+ nsgodworld.11.a:0 "好！！！"
+ nsgodworld.11.b:0 "有点离谱"
+ 
+ nsgodworld.12.t:0 "意大利王朝复辟"
+ nsgodworld.12.desc:0 "据可靠消息，意大利的法西斯分子放弃了意大利的统治，由意大利国王统治。"
+ nsgodworld.12.a:0 "好！！！"
+ nsgodworld.12.b:0 "太离谱了"
+ 
+ nsgodworld.13.t:0 "神界建造异界传送阵"
+ nsgodworld.13.desc:0 "据神界传来的消息他们成功建造了异界传送阵，这对世界有什么影响我们向未可知。"
+ nsgodworld.13.a:0 "好！！！"
+ nsgodworld.13.b:0 "什么阵？？？"
+ 
+ nsgodworld.14.t:0 "在神界突然出现大量不明人员"
+ nsgodworld.14.desc:0 "根据最新消息，神界中突然出现了奇装异服的人员，他们宣布加入了神界，他们的加入对神界有什么影响我们并不清楚。"
+ nsgodworld.14.a:0 "好！！！"
+ nsgodworld.14.b:0 "又发生奇怪的事情了"
+ 
+ nsgodworld.15.t:0 "神界宣布归还德国领土"
+ nsgodworld.15.desc:0 "根据最新消息，神界在占领法国之后宣布归还属于德国的领土。"
+ nsgodworld.15.a:0 "也只能如此了"
+ nsgodworld.15.b:0 "啊这？"
+
+ nsgodworld.16.t:0 "艾维特接受传唤"
+ nsgodworld.16.desc:0 "艾维特提议我们应该建立一个和平发展的神界，通过残留的神力给予这个世界人好处，让他们加入我们，尤其是荷兰，比利时，和卢森堡这些小国。"
+ nsgodworld.16.a:0 "让他们加入我们"
+ nsgodworld.16.b:0 "我们把他们变成傀儡吧？"
+
+ nsgodworld.17.t:0 "神界帮助中国陆军"
+ nsgodworld.17.desc:0 "根据最新消息，神界突然向中国分享了他们的陆军科技，这极大的强化了中国的陆军实力。"
+ nsgodworld.17.a:0 "好！！！"
+ nsgodworld.17.b:0 "？？？"
+
+ #被动事件
+ cegodworld.2:0 "西班牙内战"
+ cegodworld.2.t:0 "西班牙发生了内战"
+ cegodworld.2.d:0 "西班牙发生了内战，这或许是个好机会我们要怎么做呢？"
+ cegodworld.2.a:0 "我知道了"
+ 
+ cegodworld.3:0 "我们在西班牙内战中的选择"
+ cegodworld.3.t:0 "我们在西班牙内战中的选择"
+ cegodworld.3.d:0 "西班牙发生了内战，是时候作出我们的选择了？"
+ cegodworld.3.a:0 "这是个机会我们不能错过"
+ cegodworld.3.b:0 "等等吧"
+ 

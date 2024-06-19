@@ -1,0 +1,77 @@
+
+state={
+	id=56
+	name="STATE_56" #Temple of the gods
+	manpower = 26943000
+	
+	state_category = megalopolis
+
+	resources={
+		aluminium=10 # was: 2
+		steel=35 # was: 40
+		tungsten=35 # was: 40
+		chromium=72 # was: 88
+		rubber=40 # was: 72
+		oil=30 # was: 40
+	}
+
+	history={
+		owner = GOD
+		add_core_of = GOD
+		buildings = {
+			infrastructure = 5
+			air_base = 3
+			industrial_complex = 9
+			arms_factory = 10
+			dockyard = 2
+			fuel_silo = 1
+			241 = {
+				naval_base = 5
+                coastal_bunker = 4
+			}
+			247 = {
+				bunker = 4
+			}
+			309 = {
+				bunker = 4
+			}
+			336 = {
+				bunker = 4
+			}
+			3234 = {
+				bunker = 4
+			}
+			9281 = {
+				bunker = 4
+			}
+			11233 = {
+				bunker = 4
+			}
+			11264 = {
+				bunker = 4
+			}
+			11360 = {
+				bunker = 4
+			}
+			11388 = {
+				bunker = 4
+			}
+
+		}
+		victory_points = {
+			241 50
+		}
+		victory_points = {
+			11388 30
+		}
+		victory_points = {
+			11360 10
+		}
+	}
+
+	provinces={
+		241 247 309 336 3234 9281 11233 11264 11360 11388
+	}
+
+	local_supplies=14.0
+}

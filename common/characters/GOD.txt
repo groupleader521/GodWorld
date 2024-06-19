@@ -1,0 +1,1599 @@
+
+characters = {
+	#领导阶级
+	#安斯特
+	ansite_leader = {
+			name = ansite_leader
+			portraits = {
+				civilian = {
+					large = "gfx/leaders/GOD/ansite.dds"
+				}
+			}
+			country_leader = {
+				ideology = centrism
+				desc = "POLITICS_ansite_DESC"
+				traits = { powerfulleader }
+				expire = "1953.3.1.1"
+			}
+	}
+	#艾维特
+	aivert_leader = {
+			name = aivert_leader
+			portraits = {
+				civilian = {
+					large = "gfx/leaders/GOD/aivert.dds"
+				}
+			}
+			country_leader = {
+				ideology = marxism
+				desc = "POLITICS_aivert_DESC"
+				traits = { Charismaticleader }
+				expire = "1953.3.1.1"
+			}
+	}
+	#希尔菲安丽娜
+	shilfiranlina_leader = {
+			name = shilfiranlina_leader
+			portraits = {
+				civilian = {
+					large = "gfx/leaders/GOD/shilfiranlina.dds"
+				}
+			}
+			country_leader = {
+				ideology = fascism_ideology
+				desc = "POLITICS_shilfiranlina_DESC"
+				traits = { fightloveleader }
+				expire = "1953.3.1.1"
+			}
+	}
+	#蕾娜
+	lena_leader = {
+			name = lena_leader
+			portraits = {
+				civilian = {
+					large = "gfx/leaders/GOD/lena.dds"
+				}
+			}
+			country_leader = {
+				ideology = conservatism
+				desc = "POLITICS_lena_DESC"
+				traits = { buildloveleader }
+				expire = "1953.3.1.1"
+			}
+	}
+#政治家
+	#艾维特
+	aivert_p = {
+		name = aivert_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/ansite.dds"
+				small = "GFX_idea_aivert"
+			}
+			army = {
+				small = "GFX_idea_aivert"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_aivert_DESC"
+			idea_token = aivert
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				 NOT = { has_country_flag = GOD_communism }
+			}
+			traits = {
+				canuseleader
+			}
+		}	
+	}
+	
+	#希尔菲
+	shilfiranlina_p = {
+		name = shilfiranlina_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/shilfiranlina.dds"
+				small = "GFX_idea_shilfiranlina"
+			}
+			army = {
+				small = "GFX_idea_shilfiranlina"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_shilfiranlina_DESC"
+			idea_token = shilfiranlina
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				 NOT = { has_country_flag = GOD_fascism }
+			}
+			traits = {
+				greatmeleader
+			}
+		}	
+	}
+	
+	#蕾娜
+	lena_p = {
+		name = lena_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/lena.dds"
+				small = "GFX_idea_lena"
+			}
+			army = {
+				small = "GFX_idea_lena"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_lena_DESC"
+			idea_token = lena
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				 NOT = { has_country_flag = GOD_democratic }
+			}
+			traits = {
+				trychangeleader
+			}
+		}	
+	}
+	#卡斯特
+	cast_p = {
+		name = cast_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/cast.dds"
+				small = "GFX_idea_cast"
+			}
+			army = {
+				small = "GFX_idea_cast"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_cast_DESC"
+			idea_token = cast
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				cast_pt
+			}
+		}	
+	}
+	#威尔赛特
+	weliset_p = {
+		name = weliset_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/weliset.dds"
+				small = "GFX_idea_weliset"
+			}
+			army = {
+				small = "GFX_idea_weliset"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 60
+			desc = "POLITICS_weliset_DESC"
+			idea_token = weliset
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				weliset_pt
+			}
+		}	
+	}
+	#柯连娜
+	keilana_p = {
+		name = keilana_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/keilana.dds"
+				small = "GFX_idea_keilana"
+			}
+			army = {
+				small = "GFX_idea_keilana"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_keilana_DESC"
+			idea_token = keilana
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				keilana_pt
+			}
+		}	
+	}
+	#赛西丝
+	saxsi_p = {
+		name = saxsi_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/saxsi.dds"
+				small = "GFX_idea_saxsi"
+			}
+			army = {
+				small = "GFX_idea_saxsi"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_saxsi_DESC"
+			idea_token = saxsi
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				saxsi_pt
+			}
+		}	
+	}
+	#卡尔斯
+	karsi_p = {
+		name = karsi_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/karsi.dds"
+				small = "GFX_idea_karsi"
+			}
+			army = {
+				small = "GFX_idea_karsi"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_karsi_DESC"
+			idea_token = karsi
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				karsi_pt
+			}
+		}	
+	}
+	#阿托巴
+	atoba_p = {
+		name = atoba_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/atoba.dds"
+				small = "GFX_idea_atoba"
+			}
+			army = {
+				small = "GFX_idea_atoba"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_atoba_DESC"
+			idea_token = atoba
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				atoba_pt
+			}
+		}	
+	}
+	#塞米尔西斯
+	samerxisi_p = {
+		name = samerxisi_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/samerxisi.dds"
+				small = "GFX_idea_samerxisi"
+			}
+			army = {
+				small = "GFX_idea_samerxisi"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_samerxisi_DESC"
+			idea_token = samerxisi
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				samerxisi_pt
+			}
+		}	
+	}
+	#库里凯特
+	kulrkaerte_p = {
+		name = kulrkaerte_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/kulrkaerte.dds"
+				small = "GFX_idea_kulrkaerte"
+			}
+			army = {
+				small = "GFX_idea_kulrkaerte"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_kulrkaerte_DESC"
+			idea_token = kulrkaerte
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				kulrkaerte_pt
+			}
+		}	
+	}
+	#格里纳斯
+	gerlinasi_p = {
+		name = gerlinasi_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/gerlinasi.dds"
+				small = "GFX_idea_gerlinasi"
+			}
+			army = {
+				small = "GFX_idea_gerlinasi"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_gerlinasi_DESC"
+			idea_token = gerlinasi
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				gerlinasi_pt
+			}
+		}	
+	}
+	#优尔斯
+	yoersi_p = {
+		name = yoersi_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/yoersi.dds"
+				small = "GFX_idea_yoersi"
+			}
+			army = {
+				small = "GFX_idea_yoersi"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_yoersi_DESC"
+			idea_token = yoersi
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				yoersi_pt
+			}
+		}	
+	}
+	#海娜
+	haina_p = {
+		name = haina_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/haina.dds"
+				small = "GFX_idea_haina"
+			}
+			army = {
+				small = "GFX_idea_haina"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_haina_DESC"
+			idea_token = haina
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				haina_pt
+			}
+		}	
+	}
+	#塔米尔
+	tamier_p = {
+		name = tamier_p
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GOD/tamier.dds"
+				small = "GFX_idea_tamier"
+			}
+			army = {
+				small = "GFX_idea_tamier"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			cost = 150
+			desc = "POLITICS_tamier_DESC"
+			idea_token = tamier
+			allowed = {
+				original_tag = GOD
+			}
+			traits = {
+				tamier_pt
+			}
+		}	
+	}
+	#魂魄妖梦
+	youmu_a = {
+		name = youmu_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_youmu"
+			}
+			army = {
+			    large="gfx/leaders/GOD/youmu.dds"
+				small = "GFX_idea_youmu"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = youmu_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				youmu_at
+			}
+		}
+		corps_commander = {
+			traits = { nishizumi_style trait_reckless panzer_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 11118
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#桐谷和人
+	kirito_a = {
+		name = kirito_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_kirito"
+			}
+			army = {
+			    large="gfx/leaders/GOD/kirito.dds"
+				small = "GFX_idea_kirito"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = kirito_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				kirito_at
+			}
+		}
+		corps_commander = {
+			traits = { commissar guard_armor panzer_leader winter_specialist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 11119
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#绯村剑心
+	kenshi_a = {
+		name = kenshi_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_kenshi"
+			}
+			army = {
+			    large="gfx/leaders/GOD/kenshi.dds"
+				small = "GFX_idea_kenshi"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = kenshi_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				kenshi_at
+			}
+		}
+		corps_commander = {
+			traits = { anvil trait_cautious panzer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 11142
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#卫宫士郎
+	archer_a = {
+		name = archer_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_archer"
+			}
+			army = {
+			    large="gfx/leaders/GOD/archer.dds"
+				small = "GFX_idea_archer"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = archer_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				archer_at
+			}
+		}
+		corps_commander = {
+			traits = { winter_specialist guard_armor panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id = 11148
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#吉尔伽美什
+	gamsss_a = {
+		name = gamsss_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_gamsss"
+			}
+			army = {
+			    large="gfx/leaders/GOD/gamsss.dds"
+				small = "GFX_idea_gamsss"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = gamsss_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				gamsss_at
+			}
+		}
+		corps_commander = {
+			traits = { nishizumi_style trait_cautious panzer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = 11162
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#五河琴里
+	qinli_a = {
+		name = qinli_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_qinli"
+			}
+			army = {
+			    large="gfx/leaders/GOD/qinli.dds"
+				small = "GFX_idea_qinli"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = qinli_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				qinli_at
+			}
+		}
+		corps_commander = {
+			traits = { nishizumi_style trait_cautious panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 11122
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#黑崎一护
+	kusaigo_a = {
+		name = kusaigo_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_kusaigo"
+			}
+			army = {
+			    large="gfx/leaders/GOD/kusaigo.dds"
+				small = "GFX_idea_kusaigo"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = kusaigo_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				kusaigo_at
+			}
+		}
+		corps_commander = {
+			traits = { nishizumi_style trait_reckless panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 11163
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#黑
+	black_a = {
+		name = black_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_black"
+			}
+			army = {
+			    large="gfx/leaders/GOD/black.dds"
+				small = "GFX_idea_black"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = black_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				black_at
+			}
+		}
+		corps_commander = {
+			traits = { saundersskill alisa_recon trait_reckless panzer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 11120
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#朝田诗乃
+	shirool_a = {
+		name = shirool_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_shirool"
+			}
+			army = {
+			    large="gfx/leaders/GOD/shirool.dds"
+				small = "GFX_idea_shirool"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 150
+			idea_token = shirool_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				shirool_at
+			}
+		}
+		corps_commander = {
+			traits = { saundersskill bearer_of_artillery panzer_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 11145
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#三笠
+	sanli_a = {
+		name = sanli_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_sanli"
+			}
+			army = {
+			    large="gfx/leaders/GOD/sanli.dds"
+				small = "GFX_idea_sanli"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = sanli_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				sanli_at
+			}
+		}
+		corps_commander = {
+			traits = { anvil panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 11144
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#夏娜
+	shana_a = {
+		name = shana_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_shana"
+			}
+			army = {
+			    large="gfx/leaders/GOD/shana.dds"
+				small = "GFX_idea_shana"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = shana_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				shana_at
+			}
+		}
+		corps_commander = {
+			traits = { chihadanskill trait_cautious jungle_rat panzer_leader }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = 11103
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#金色之暗
+	yami_a = {
+		name = yami_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_yami"
+			}
+			army = {
+			    large="gfx/leaders/GOD/yami.dds"
+				small = "GFX_idea_yami"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = yami_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				yami_at
+			}
+		}
+		corps_commander = {
+			traits = { chihadanskill trait_reckless panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 11105
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#白岩射手
+	whiterockshoot_a = {
+		name = whiterockshoot_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_whiterockshoot"
+			}
+			army = {
+			    large="gfx/leaders/GOD/whiterockshoot.dds"
+				small = "GFX_idea_whiterockshoot"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = whiterockshoot_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				whiterockshoot_at
+			}
+		}
+		corps_commander = {
+			traits = { chihadanskill trait_reckless panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 11104
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#黑贞德
+	alter_zhen_a = {
+		name = alter_zhen_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_alter_zhen"
+			}
+			army = {
+			    large="gfx/leaders/GOD/alter_zhen.dds"
+				small = "GFX_idea_alter_zhen"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = alter_zhen_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				alter_zhen_at
+			}
+		}
+		corps_commander = {
+			traits = { nishizumi_miho oorai_style  panzer_leader }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 11110
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#一方通行
+	accilinder_a = {
+		name = accilinder_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_accilinder"
+			}
+			army = {
+			    large="gfx/leaders/GOD/accilinder.dds"
+				small = "GFX_idea_accilinder"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = accilinder_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				accilinder_at
+			}
+		}
+		corps_commander = {
+			traits = { oorai_style trait_cautious panzer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 11112
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#立华奏
+	kanada_a = {
+		name = kanada_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_kanada"
+			}
+			army = {
+			    large="gfx/leaders/GOD/kanada.dds"
+				small = "GFX_idea_kanada"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = kanada_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				kanada_at
+			}
+		}
+		corps_commander = {
+			traits = { anvil trait_reckless rosehip_speed panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 11143
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#亚丝娜
+	yausna_a = {
+		name = yausna_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_yausna"
+			}
+			army = {
+			    large="gfx/leaders/GOD/yausna.dds"
+				small = "GFX_idea_yausna"
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 150
+			idea_token = yausna_a
+			ledger = army
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+			    NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				yausna_at
+			}
+		}
+		corps_commander = {
+			traits = { shizuka_trait light_tank trait_reckless panzer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 1
+			legacy_id = 11173
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#高町奈叶
+	gaotingnaiye_a = {
+		name = gaotingnaiye_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_gaotingnaiye"
+			}
+			army = {
+			    large="gfx/leaders/GOD/gaotingnaiye.dds"
+				small = "GFX_idea_gaotingnaiye"
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = gaotingnaiye_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				gaotingnaiye_at
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist career_officer infantry_officer cavalry_officer bearer_of_artillery armor_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 11177
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#纳兹
+	nazi_a = {
+		name = nazi_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_nazi"
+			}
+			army = {
+				small = "GFX_idea_nazi"
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = nazi_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				nazi_at
+			}
+		}
+	}
+	#安兹乌尔恭
+	anzi_a = {
+		name = anzi_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_anzi"
+			}
+			army = {
+				small = "GFX_idea_anzi"
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = anzi_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				anzi_at
+			}
+		}
+	}
+	#阿尔托莉雅潘德拉贡
+	saber_a = {
+		name = saber_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_saber"
+			}
+			army = {
+				small = "GFX_idea_saber"
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = saber_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				saber_at
+			}
+		}
+	}
+	#刻晴
+	keqing_a = {
+		name = keqing_a
+		portraits = {
+			civilian = {
+				small = "GFX_idea_keqing"
+			}
+			army = {
+				small = "GFX_idea_keqing"
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = keqing_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				keqing_at
+			}
+		}
+	}
+	#伊卡洛斯
+	yiaklosi_a = {
+		name = yiaklosi_a
+		portraits = {
+			army = {
+			    large="gfx/leaders/GOD/yiaklosi.dds"
+				small = "GFX_idea_yiaklosi"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			cost = 135
+			desc = "oginnavalcheif_desc"
+			idea_token = yiaklosi_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				yiaklosi_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = { shark_team superior_tactician gentlemanly battleship_adherent navy_career_officer sea_hero }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			maneuvering_skill = 3
+			coordination_skill = 4
+			legacy_id = 11149
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#十六夜咲夜
+	shiliuye_a = {
+		name = shiliuye_a
+		portraits = {
+			army = {
+			    large="gfx/leaders/GOD/shiliuye.dds"
+				small = "GFX_idea_shiliuye"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			cost = 135
+			desc = "oginnavalcheif_desc"
+			idea_token = shiliuye_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				shiliuye_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = { shark_team seawolf silent_hunter fleet_protector }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 4
+			legacy_id = 11152
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#凛
+	rin_a = {
+		name = rin_a
+		portraits = {
+			army = {
+			    large="gfx/leaders/GOD/rin.dds"
+				small = "GFX_idea_rin"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			cost = 150
+			desc = "misakinavalcheif_desc"
+			idea_token = rin_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				rin_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = { superior_tactician aviation_enthusiast ironside navy_career_officer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			maneuvering_skill = 4
+			coordination_skill = 5
+			legacy_id = 11154
+			visible = { 
+			    has_completed_focus = GOD_call_other_world_people
+			}
+		}
+	}
+	#惠惠
+	megame_a = {
+		name = megame_a
+		portraits = {
+		    civilian = {
+			    small = "GFX_idea_megame"
+			}
+			army = {
+				small = "GFX_idea_megame"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = megame_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				megame_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#小鸟游六花
+	liuhua_a = {
+		name = liuhua_a
+		portraits = {
+		    civilian = {
+			    small = "GFX_idea_liuhua"
+			}
+			army = {
+				small = "GFX_idea_liuhua"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = liuhua_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				liuhua_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#五更琉璃
+	blackcat_a = {
+		name = blackcat_a
+		portraits = {
+		    civilian = {
+			    small = "GFX_idea_blackcat"
+			}
+			army = {
+				small = "GFX_idea_blackcat"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = blackcat_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				blackcat_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#鹿目圆香
+	yuangod_a = {
+		name = yuangod_a
+		portraits = {
+		    civilian = {
+			    small = "GFX_idea_yuangod"
+			}
+			army = {
+				small = "GFX_idea_yuangod"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = yuangod_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				yuangod_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#御坂美琴
+	paojie_a = {
+		name = paojie_a
+		portraits = {
+		    civilian = {
+			    small = "GFX_idea_paojie"
+			}
+			army = {
+				small = "GFX_idea_paojie"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = paojie_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				paojie_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#鸢一折纸
+	zhezhi_a = {
+		name = zhezhi_a
+		portraits = {
+		    civilian = {
+			    small = "GFX_idea_zhezhi"
+			}
+			army = {
+				small = "GFX_idea_zhezhi"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = zhezhi_a
+			allowed = {
+				original_tag = GOD
+			}
+			available = {
+				NOT = { has_country_flag = refuse_work_pravda }
+				has_completed_focus = GOD_call_other_world_people
+			}
+			traits = {
+				zhezhi_at
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

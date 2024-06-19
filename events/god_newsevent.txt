@@ -1,0 +1,520 @@
+﻿add_namespace = nsgodworld
+#干涉世界
+news_event = {
+	id = nsgodworld.1
+	title = nsgodworld.1.t
+	desc = nsgodworld.1.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.1.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.1.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+		}
+	}
+}
+#神界完成联合
+news_event = {
+	id = nsgodworld.2
+	title = nsgodworld.2.t
+	desc = nsgodworld.2.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.2.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.2.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+		}
+	}
+}
+#与德国的边境冲突
+news_event = {
+	id = nsgodworld.3
+	title = nsgodworld.3.t
+	desc = nsgodworld.3.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.3.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.3.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+				TAG = GER
+			}
+			
+		}
+	}
+	option = {
+		name = nsgodworld.3.c
+		trigger = {
+			TAG = GER
+		}
+	}
+	
+}
+#与苏联的边境冲突
+news_event = {
+	id = nsgodworld.4
+	title = nsgodworld.4.t
+	desc = nsgodworld.4.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.4.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.4.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+				TAG = SOV
+			}
+			
+		}
+	}
+	option = {
+		name = nsgodworld.4.c
+		trigger = {
+			TAG = SOV
+		}
+	}
+	
+}
+#关注中国
+news_event = {
+	id = nsgodworld.5
+	title = nsgodworld.5.t
+	desc = nsgodworld.5.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.5.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.5.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+				TAG = CHI
+				TAG = PRC
+			}
+			
+		}
+	}
+	option = {
+		name = nsgodworld.5.c
+		trigger = {
+			OR = {
+				TAG = CHI
+				TAG = PRC
+			}
+		}
+	}
+	
+}
+
+#帮助共产党
+news_event = {
+	id = nsgodworld.6
+	title = nsgodworld.6.t
+	desc = nsgodworld.6.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.6.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.6.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+				TAG = CHI
+				TAG = PRC
+			}
+			
+		}
+	}
+	option = {
+		name = nsgodworld.6.c
+		trigger = {
+			TAG = PRC
+		}
+	}
+	option = {
+		name = nsgodworld.6.d
+		trigger = {
+			TAG = CHI
+		}
+	}
+	
+}
+#国民党
+news_event = {
+	id = nsgodworld.7
+	title = nsgodworld.7.t
+	desc = nsgodworld.7.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.7.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.7.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+				TAG = CHI
+				TAG = PRC
+			}
+			
+		}
+	}
+	option = {
+		name = nsgodworld.7.c
+		trigger = {
+			TAG = CHI
+		}
+	}
+	option = {
+		name = nsgodworld.7.d
+		trigger = {
+			TAG = PRC
+		}
+	}
+	
+}
+#吞并荷兰
+news_event = {
+	id = nsgodworld.8
+	title = nsgodworld.8.t
+	desc = nsgodworld.8.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.8.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.8.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#吞并比利时
+news_event = {
+	id = nsgodworld.9
+	title = nsgodworld.9.t
+	desc = nsgodworld.9.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.9.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.9.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#吞并卢森堡
+news_event = {
+	id = nsgodworld.10
+	title = nsgodworld.10.t
+	desc = nsgodworld.10.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.10.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.10.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#意大利内战
+news_event = {
+	id = nsgodworld.11
+	title = nsgodworld.11.t
+	desc = nsgodworld.11.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.11.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.11.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+
+#意大利大内战
+news_event = {
+	id = nsgodworld.12
+	title = nsgodworld.12.t
+	desc = nsgodworld.12.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.12.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.12.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+
+#意大利王朝复辟
+news_event = {
+	id = nsgodworld.13
+	title = nsgodworld.13.t
+	desc = nsgodworld.13.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.13.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.13.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#建造异界传送阵
+news_event = {
+	id = nsgodworld.14
+	title = nsgodworld.14.t
+	desc = nsgodworld.14.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.14.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.14.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#帮助中国陆军
+news_event = {
+	id = nsgodworld.17
+	title = nsgodworld.17.t
+	desc = nsgodworld.17.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.17.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.17.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#宣布归还德国领土
+news_event = {
+	id = nsgodworld.15
+	title = nsgodworld.15.t
+	desc = nsgodworld.15.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsgodworld.15.a
+		trigger = {
+			TAG = GOD
+		}
+	}
+	option = {
+		name = nsgodworld.15.b
+		trigger = {
+			NOT = {
+				TAG = GOD
+			}
+			
+		}
+	}
+}
+#传唤艾维特
+news_event = {
+	id = nsgodworld.16
+	title = nsgodworld.16.t
+	desc = nsgodworld.16.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = nsgodworld.16.a
+		trigger = {
+			TAG = GOD
+			add_political_power = 150
+		}
+	}
+	option = {
+		name = nsgodworld.16.b
+		trigger = {
+			TAG = GOD
+			unlock_decision_tooltip = GOD_Puppet_plan
+			set_global_flag = form_Puppet_flag
+		}
+	}
+	
+}

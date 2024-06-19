@@ -1,0 +1,1710 @@
+political_actions = {
+	GOD_germany_annex = {
+		icon = generic_nationalism
+		available = {
+		    GER = { 
+			    exists = yes
+				is_in_faction_with = GOD
+				NOT = {
+				    has_idea = special_puppet
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GOD_Survey_Germany
+			GER = { 
+			    exists = yes
+			}
+		}
+		cancel_trigger = {
+		    GER = {
+			    OR = {
+				    exists = no
+					NOT = {
+					    is_in_faction_with = GOD
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 70
+		cost = 150
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+		    annex_country = { target = GER transfer_troops = no }
+		}
+	}
+	GOD_sov_annex = {
+		icon = generic_nationalism
+		available = {
+		    SOV = { 
+			    exists = yes
+				is_in_faction_with = GOD
+				NOT = {
+				    has_idea = special_puppet
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GOD_Investigate_the_Soviet_Union
+			SOV = { 
+			    exists = yes
+			}
+		}
+		cancel_trigger = {
+		    SOV = {
+			    OR = {
+				    exists = no
+					NOT = {
+					    is_in_faction_with = GOD
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 70
+		cost = 150
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+		    annex_country = { target = SOV transfer_troops = no }
+		}
+	}
+	GOD_asia_support_PRC = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Help_the_prc
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = PRC
+			}
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = 2000_infantry_equipment_1
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+		    set_country_flag = prc_guns_yes
+		    send_equipment = {
+                equipment = infantry_equipment
+                amount = 2000
+                target = FROM
+            }
+		}
+	}
+	GOD_asia_officer_PRC = {
+	    icon = generic_army_support
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Help_the_prc
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = PRC
+			}
+		}
+		cancel_trigger = {
+		    FROM = {
+			    OR = {
+				    exists = no
+					has_war_with = GOD
+				}
+			}
+		}
+		cost = 45
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+		    set_country_flag = prc_officers_yes
+		    FROM = {
+			    army_experience = 45
+				add_political_power = 25
+				country_event = { id = nsgodworld.6 }
+				custom_effect_tooltip = china_tank_tip
+			}
+		}
+	}
+	GOD_asia_officer_KMT = {
+	    icon = generic_army_support
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Help_the_krm
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = CHI
+			}
+		}
+		cancel_trigger = {
+		    FROM = {
+			    OR = {
+				    exists = no
+					has_war_with = GOD
+				}
+			}
+		}
+		cost = 45
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+		    set_country_flag = kmt_officers_yes
+		    FROM = {
+			    army_experience = 45
+				add_political_power = 25
+				country_event = { id = nsgodworld.7 }
+				custom_effect_tooltip = china_tank_tip
+			}
+		}
+	}
+	GOD_asia_support_KMT = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Help_the_krm
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = CHI
+			}
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = 2000_infantry_equipment_1
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+		    set_country_flag = kmt_guns_yes
+		    send_equipment = {
+                equipment = infantry_equipment
+                amount = 2000
+                target = FROM
+            }
+		}
+	}
+}
+
+GOD_Puppet_plan={
+	#吞并荷兰
+	GOD_For_Hol_God_Power = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		
+		visible = {
+		    NOT = { has_global_flag = form_Puppet_flag }
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = HOL
+			}
+		}
+		cost = 25
+		fire_only_once = no
+		days_remove = 20
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+			country_event = { id = nsgodworld.8 }
+			every_state = {
+				limit = { is_core_of = HOL }
+				add_core_of = ROOT
+			}
+		    annex_country = { target = HOL transfer_troops = yes }
+			
+		}
+	}
+}
+
+
+GOD_expand_plan={
+	#吞并荷兰
+	GOD_expand_plan_hol = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Expansion_plan
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = HOL
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+			country_event = { id = nsgodworld.8 }
+			every_state = {
+				limit = { is_core_of = HOL }
+				add_core_of = ROOT
+			}
+		    annex_country = { target = HOL transfer_troops = yes }
+			
+		}
+	}
+
+	#吞并比利时
+	GOD_expand_plan_bel = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Expansion_plan
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = BEL
+			}
+		}
+		cost = 50
+		days_remove = 70
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+		country_event = { id = nsgodworld.9 }
+		every_state = {
+				limit = { is_core_of = BEL }
+				add_core_of = ROOT
+			}
+		    annex_country = { target = BEL transfer_troops = yes }
+			
+		}
+	}
+	#吞并卢森堡
+	GOD_expand_plan_lux = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Expansion_plan
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = LUX
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+		country_event = { id = nsgodworld.10 }
+			every_state = {
+					limit = { is_core_of = LUX }
+					add_core_of = ROOT
+				}
+		    annex_country = { target = LUX transfer_troops = yes }
+			
+		}
+	}
+}
+GOD_control_ita = {
+	#对意大利宣传有神论
+	GOD_control_ita_kinghelpa = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		fire_only_once = yes
+		
+		available = {
+			FROM = {
+			    exists = yes
+				NOT = {
+				    has_war_with = GOD
+				}
+				has_civil_war = no
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Interference_in_Italy
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+					has_government = neutrality
+				}
+			}
+			
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = ITA
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+			ITA= {
+				add_ideas = god_ita_kinghelp
+			}
+		}
+	}
+	#意大利皇室发动政变
+	GOD_control_ita_kingwar = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				neutrality > 0.5
+				NOT = {
+				    has_war_with = GOD
+				}
+				has_civil_war = no
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Interference_in_Italy
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+					has_government = neutrality
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = ITA
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+			ITA = {
+				start_civil_war = {
+				ideology = neutrality
+				}
+			}
+			country_event = { id = nsgodworld.11 }
+		}
+	}
+	#意大利王朝
+	GOD_control_ita_kingwar2 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				neutrality > 0.7
+				NOT = {
+				    has_war_with = GOD
+				}
+				has_civil_war = no
+			}
+		}
+		visible = {
+		    has_completed_focus = GOD_Interference_in_Italy
+			FROM = {
+			    exists = yes
+			    NOT = {
+				    has_war_with = GOD
+					has_government = neutrality
+				}
+			}
+		}
+		target_trigger = {
+		    FROM = {
+			    tag = ITA
+			}
+		}
+		cost = 200
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+			ITA = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+			}
+			country_event = { id = nsgodworld.12 }
+		}
+	}
+}
+GOD_political_reorganization = {
+	#更改政治重心为共产主义
+	GOD_political_reorganization_communism = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			   exists = yes
+			NOT = {
+				has_government = communism
+				communism > 0.9
+				has_country_flag = god_flag_decisions_political_reorganization_communism
+			}
+			
+		}
+		cost = 0
+		days_remove = 1
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				add_ideas = god_idea_political_reorganization_communism
+				set_country_flag = god_flag_decisions_political_reorganization_communism
+			}
+		}
+	}
+	GOD_political_reorganization_no_communism = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+		}
+		visible = {
+			exists = yes
+			has_country_flag = god_flag_decisions_political_reorganization_communism
+		}
+		cost = 0
+		days_remove = 1
+		
+		remove_effect = {
+			GOD= {
+				remove_ideas = god_idea_political_reorganization_communism
+				clr_country_flag = god_flag_decisions_political_reorganization_communism
+				clr_country_flag = god_flag_decisions_political_reorganization_now
+			}
+		}
+	}
+	#重视民主
+	GOD_political_reorganization_democratic = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			   exists = yes
+			NOT = {
+				has_government = democratic
+				democratic > 0.9
+				has_country_flag = god_flag_decisions_political_reorganization_democratic
+			}
+			
+		}
+		cost = 0
+		days_remove = 1
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				add_ideas = god_idea_political_reorganization_democratic
+				set_country_flag = god_flag_decisions_political_reorganization_democratic
+			}
+		}
+	}
+	GOD_political_reorganization_no_democratic = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+		}
+		visible = {
+			exists = yes
+			has_country_flag = god_flag_decisions_political_reorganization_democratic
+		}
+		cost = 0
+		days_remove = 1
+		
+		remove_effect = {
+			GOD= {
+				remove_ideas = god_idea_political_reorganization_democratic
+				clr_country_flag = god_flag_decisions_political_reorganization_democratic
+				clr_country_flag = god_flag_decisions_political_reorganization_now
+			}
+		}
+	}
+	#重视中立
+	GOD_political_reorganization_neutrality = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			   exists = yes
+			NOT = {
+				has_government = neutrality
+				neutrality > 0.9
+				has_country_flag = god_flag_decisions_political_reorganization_neutrality
+			}
+			
+		}
+		cost = 0
+		days_remove = 1
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				add_ideas = god_idea_political_reorganization_neutrality
+				set_country_flag = god_flag_decisions_political_reorganization_neutrality
+			}
+		}
+	}
+	GOD_political_reorganization_no_neutrality = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+		}
+		visible = {
+			exists = yes
+			has_country_flag = god_flag_decisions_political_reorganization_neutrality
+		}
+		cost = 0
+		days_remove = 1
+		
+		remove_effect = {
+			GOD= {
+				remove_ideas = god_idea_political_reorganization_neutrality
+				clr_country_flag = god_flag_decisions_political_reorganization_neutrality
+				clr_country_flag = god_flag_decisions_political_reorganization_now
+			}
+		}
+	}
+	#重视法西斯
+	GOD_political_reorganization_fascism = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			   exists = yes
+			NOT = {
+				has_government = fascism
+				fascism > 0.9
+				has_country_flag = god_flag_decisions_political_reorganization_fascism
+			}
+			
+		}
+		cost = 0
+		days_remove = 1
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				add_ideas = god_idea_political_reorganization_fascism
+				set_country_flag = god_flag_decisions_political_reorganization_fascism
+			}
+		}
+	}
+	GOD_political_reorganization_no_fascism = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+		}
+		visible = {
+			exists = yes
+			has_country_flag = god_flag_decisions_political_reorganization_fascism
+		}
+		cost = 0
+		days_remove = 1
+		
+		remove_effect = {
+			GOD= {
+				remove_ideas = god_idea_political_reorganization_fascism
+				clr_country_flag = god_flag_decisions_political_reorganization_fascism
+				clr_country_flag = god_flag_decisions_political_reorganization_now
+			}
+		}
+	}
+	#安斯特执政中立
+	GOD_political_rule_ansite1 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+			
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = neutrality
+			NOT = {
+
+				has_country_leader = {character = ansite_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "ansite_leader" #领导人名字
+
+					desc = "POLITICS_ansite_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/ansite.dds
+
+					traits = { powerfulleader }
+					expire = "1953.3.1.1"
+
+					ideology = centrism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#艾维特执政中立
+	GOD_political_rule_aivert1 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = neutrality
+			NOT = {
+				has_country_leader = {character = aivert_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "aivert_leader" #领导人名字
+
+					desc = "POLITICS_aivert_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/aivert.dds
+
+					traits = { Charismaticleader }
+					expire = "1953.3.1.1"
+
+					ideology = centrism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#希尔菲执政中立
+	GOD_political_rule_shilfiranlina1 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = neutrality
+			NOT = {
+				has_country_leader = {character = shilfiranlina_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "shilfiranlina_leader" #领导人名字
+
+					desc = "POLITICS_shilfiranlina_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/shilfiranlina.dds
+
+					traits = { fightloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = centrism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#蕾娜执政中立
+	GOD_political_rule_lena1 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = neutrality
+			NOT = {
+				
+				has_country_leader = {character = lena_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "lena_leader" #领导人名字
+
+					desc = "POLITICS_lena_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/lena.dds
+
+					traits = { buildloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = centrism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	
+	#安斯特执政民主
+	GOD_political_rule_ansite2 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = democratic
+			NOT = {
+				has_country_leader = {character = ansite_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "ansite_leader" #领导人名字
+
+					desc = "POLITICS_ansite_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/ansite.dds
+
+					traits = { powerfulleader }
+					expire = "1953.3.1.1"
+
+					ideology = conservatism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#艾维特执政民主
+	GOD_political_rule_aivert2 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = democratic
+			NOT = {
+				has_country_leader = {character = aivert_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "aivert_leader" #领导人名字
+
+					desc = "POLITICS_aivert_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/aivert.dds
+
+					traits = { Charismaticleader }
+					expire = "1953.3.1.1"
+
+					ideology = conservatism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#希尔菲执政民主
+	GOD_political_rule_shilfiranlina2 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = democratic
+			NOT = {
+				has_country_leader = {character = shilfiranlina_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "shilfiranlina_leader" #领导人名字
+
+					desc = "POLITICS_shilfiranlina_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/shilfiranlina.dds
+
+					traits = { fightloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = conservatism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#蕾娜执政民主
+	GOD_political_rule_lena2 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = democratic
+			NOT = {
+				
+				has_country_leader = {character = lena_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "lena_leader" #领导人名字
+
+					desc = "POLITICS_lena_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/lena.dds
+
+					traits = { buildloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = conservatism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#安斯特执政共产
+	GOD_political_rule_ansite3 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = communism
+			NOT = {
+				has_country_leader = {character = ansite_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "ansite_leader" #领导人名字
+
+					desc = "POLITICS_ansite_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/ansite.dds
+
+					traits = { powerfulleader }
+					expire = "1953.3.1.1"
+
+					ideology = marxism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#艾维特执政共产
+	GOD_political_rule_aivert3 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			has_government = communism
+			exists = yes
+			NOT = {
+				has_country_leader = {character = aivert_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "aivert_leader" #领导人名字
+
+					desc = "POLITICS_aivert_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/aivert.dds
+
+					traits = { Charismaticleader }
+					expire = "1953.3.1.1"
+
+					ideology = marxism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#希尔菲执政共产
+	GOD_political_rule_shilfiranlina3 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = communism
+			NOT = {
+				
+				has_country_leader = {character = shilfiranlina_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "shilfiranlina_leader" #领导人名字
+
+					desc = "POLITICS_shilfiranlina_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/shilfiranlina.dds
+
+					traits = { fightloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = marxism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#蕾娜执政共产
+	GOD_political_rule_lena3 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = communism
+			NOT = {
+				
+				has_country_leader = {character = lena_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "lena_leader" #领导人名字
+
+					desc = "POLITICS_lena_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/lena.dds
+
+					traits = { buildloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = marxism #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	
+	#安斯特执政法西斯
+	GOD_political_rule_ansite4 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = fascism
+			NOT = {
+				
+				has_country_leader = {character = ansite_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "ansite_leader" #领导人名字
+
+					desc = "POLITICS_ansite_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/ansite.dds
+
+					traits = { powerfulleader }
+					expire = "1953.3.1.1"
+
+					ideology = fascism_ideology#哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#艾维特执政法西斯
+	GOD_political_rule_aivert4 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = fascism
+			NOT = {
+				has_country_leader = {character = aivert_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "aivert_leader" #领导人名字
+
+					desc = "POLITICS_aivert_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/aivert.dds
+
+					traits = { Charismaticleader }
+					expire = "1953.3.1.1"
+
+					ideology = fascism_ideology #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#希尔菲执政法西斯
+	GOD_political_rule_shilfiranlina4 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = fascism
+			NOT = {
+				has_country_leader = {character = shilfiranlina_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "shilfiranlina_leader" #领导人名字
+
+					desc = "POLITICS_shilfiranlina_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/shilfiranlina.dds
+
+					traits = { fightloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = fascism_ideology #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	#蕾娜执政法西斯
+	GOD_political_rule_lena4 = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			exists = yes
+			has_government = fascism
+			NOT = {
+				
+				has_country_leader = {character = lena_leader ruling_only = yes}
+				
+			}
+			
+			
+		}
+		cost = 0
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			GOD= {
+				create_country_leader = {
+
+					name = "lena_leader" #领导人名字
+
+					desc = "POLITICS_lena_DESC" #领导人描述(在localisation 文件夹里添加)
+					picture = gfx/leaders/GOD/lena.dds
+
+					traits = { buildloveleader }
+					expire = "1953.3.1.1"
+
+					ideology = fascism_ideology #哪种意识形态(细化后的)
+
+				}
+			}
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+		}
+	}
+	
+	GOD_political_reorganization_no_fascism = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			exists = yes
+			has_civil_war = no
+		}
+		visible = {
+			exists = yes
+			has_country_flag = god_flag_decisions_political_reorganization_fascism
+		}
+		cost = 0
+		days_remove = 1
+		
+		remove_effect = {
+			GOD= {
+				remove_ideas = god_idea_political_reorganization_fascism
+				clr_country_flag = god_flag_decisions_political_reorganization_fascism
+				clr_country_flag = god_flag_decisions_political_reorganization_now
+			}
+		}
+	}
+	#政权更迭
+	GOD_political_reorganization_change = {
+	    icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+			    exists = yes
+				has_civil_war = no
+			}
+			NOT = {has_country_flag = god_flag_decisions_political_reorganization_now}
+			
+		}
+		visible = {
+		    has_completed_focus = GOD_world_union
+			   exists = yes
+			or = {
+				GOD = {
+					communism > party_popularity@democratic
+					communism > party_popularity@neutrality
+					communism > party_popularity@fascism
+				}
+				GOD = {
+					democratic > party_popularity@communism
+					democratic > party_popularity@neutrality
+					democratic > party_popularity@fascism
+				}
+				GOD = {
+					neutrality > party_popularity@communism
+					neutrality > party_popularity@democratic
+					neutrality > party_popularity@fascism
+				}
+				GOD = {
+					fascism > party_popularity@communism
+					fascism > party_popularity@democratic
+					fascism > party_popularity@neutrality
+				}
+			}
+		}
+		cost = 0
+		#fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = god_flag_decisions_political_reorganization_now
+		}
+		remove_effect = {
+			clr_country_flag = god_flag_decisions_political_reorganization_now
+			if = {
+				limit = {
+					GOD = {
+					communism > party_popularity@democratic
+					communism > party_popularity@neutrality
+					communism > party_popularity@fascism
+					}
+				}
+				set_politics = {
+					ruling_party = communism
+				}
+			}
+			if = {
+				limit = {
+					GOD = {
+					democratic > party_popularity@communism
+					democratic > party_popularity@neutrality
+					democratic > party_popularity@fascism
+					}
+				}
+				set_politics = {
+					ruling_party = democratic
+				}
+			}
+			if = {
+				limit = {
+					GOD = {
+					neutrality > party_popularity@communism
+					neutrality > party_popularity@democratic
+					neutrality > party_popularity@fascism
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+				}
+			}
+			if = {
+				limit = {
+					GOD = {
+					fascism > party_popularity@communism
+					fascism > party_popularity@democratic
+					fascism > party_popularity@neutrality
+					}
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+			}
+			
+		}
+	}
+}
+GOD_HELP_CHI_INS={
+	#援助中国工业
+	GOD_HELP_PRC_INS = {
+		icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+				exists = yes
+				NOT = {
+					has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GOD_Help_the_prc_ind
+			FROM = {
+				exists = yes
+				NOT = {
+					has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				tag = PRC
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		modifier = {
+			consumer_goods_factor = 0.3
+		}
+		remove_effect = {
+			PRC = {
+				add_offsite_building = { type = industrial_complex level = 2 }
+				add_offsite_building = { type = arms_factory level = 2 }
+				add_offsite_building = { type = dockyard level = 2 }
+				
+				
+				
+			}
+			}
+		
+	}
+
+	GOD_HELP_KMT_INS = {
+		icon = ger_military_buildup
+		allowed = { tag = GOD }
+		available = {
+			FROM = {
+				exists = yes
+				NOT = {
+					has_war_with = GOD
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GOD_Help_the_krm_ind
+			FROM = {
+				exists = yes
+				NOT = {
+					has_war_with = GOD
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				tag = CHI
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		modifier = {
+			consumer_goods_factor = 0.3
+		}
+		remove_effect = {
+			CHI = {
+				add_offsite_building = { type = industrial_complex level = 2 }
+				add_offsite_building = { type = arms_factory level = 2 }
+				add_offsite_building = { type = dockyard level = 2 }
+				
+				
+				
+			}
+			}
+		
+	}
+}

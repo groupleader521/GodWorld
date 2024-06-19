@@ -1,0 +1,46 @@
+#################
+#### GERMANY ####
+#################
+#扩张计划
+GOD_expand_plan = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = GOD
+	}
+	priority = 10
+}
+#干涉意大利
+GOD_control_ita = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = GOD
+	}
+	priority = 10
+}
+#神界政治重组
+GOD_political_reorganization = {
+	icon = ger_mefo_bills
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = GOD
+	}
+	priority = 10
+}
+
+#援助中国工业
+GOD_HELP_CHI_INS = {
+	icon = ger_mefo_bills
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = GOD
+	}
+	priority = 10
+}
